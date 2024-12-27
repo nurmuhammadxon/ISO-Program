@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Program</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body style="font-family: 'Noto Sans', sans-serif;">
+
+    <!-- Header Section -->
+    <header class="max-w-[1440px] w-full h-[80px] mx-auto flex items-center bg-[#121212]">
+        <!-- Navbar section -->
+        <nav class="flex items-center max-w-[1200px] w-full mx-auto">
+            <!-- Logo -->
+            <div class="max-w-[126px] h-[25px]">
+                <img class="object-cover object-center" src="./imgs/logo.png" alt="Logo brend">
+            </div>
+            <!-- Navigation list -->
+            <ul class="flex items-center gap-6 ml-[55px]">
+                <li>
+                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
+                        Business Types
+                    </a>
+                </li>
+                <li>
+                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
+                        Who Are We?
+                    </a>
+                </li>
+                <li>
+                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
+                        Pricing
+                    </a>
+                </li>
+            </ul>
+            <!-- Accoutn buttons -->
+            <div class="ml-auto h-[42px] my-auto flex gap-7">
+                <button
+                    class="w-[126px] h-[40px] border-white border-solid border-[1px] rounded-[55px] flex items-center justify-center font-normal text-[14px] leading-[19px] text-[#EAEAEA]">
+                    Sign in
+                </button>
+                <button
+                    class="w-[126px] h-[40px] bg-[#187AC9] rounded-[55px] flex items-center justify-center font-normal text-[14px] leading-[19px] text-[#EAEAEA]">
+                    Get Started
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="max-w-[1440px] w-full mx-auto">
+        <!-- Hero section -->
+        <section class="relative pt-[150px] h-[610px]">
+            <div class="absolute left-0 top-0 -z-10 w-full h-full">
+                <video autoplay muted loop class="object-cover w-full h-full">
+                    <source src="./imgs/background.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="w-[753px] mx-auto">
+                <h1 class="text-white text-[60px] leading-[66px] text-center font-semibold">
+                    A Modern Approach
+                    to The ISO Industry
+                </h1>
+                <p class="text-white text-[20px] text-center leading-[30px] font-normal mt-[14px]">
+                    Whether you are starting your first ISO or a veteran ready to scale your business, we have the tools
+                    you
+                    need to beat the competition.
+                </p>
+                <div class="text-center mt-[25px]">
+                    <a href="#" class="inline-block py-[11px] px-[25px] bg-white rounded-[55px]">
+                        Get Started
+                        <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center absolute bottom-0 left-0 w-full h-[80px] bg-[#121212]">
+                <ul class="flex items-center justify-between max-w-[924px] w-full mx-auto">
+                    <li>
+                        <a href="#">
+                            <img class="object-cover object-center" src="./imgs/TSYS.png" alt="TSYS card">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="object-cover object-center" src="./imgs/Mastercard_2019_logo 1.png" alt="card">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="object-cover object-center" src="./imgs/AMEX.png" alt="AMEX card">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="object-cover object-center" src="./imgs/Fiserv_logo.png" alt="Fiserv card">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="object-cover object-center" src="./imgs/Visa.png" alt="Visa card">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <script src="./Script/main.js"></script>
+</body>
+
+</html>
