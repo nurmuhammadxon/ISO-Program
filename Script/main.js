@@ -1,11 +1,11 @@
-document.addEventListener("scroll", () => {
-    const background = document.querySelector(".bg-hero-gradient");
-    const scrollPosition = window.scrollY;
-  
-    if (scrollPosition > 50) {
-      background.classList.add("bg-opacity-90");
-    } else {
-      background.classList.remove("bg-opacity-90");
-    }
-  });
-  
+// Swiper 
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
