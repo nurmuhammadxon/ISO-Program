@@ -10,3 +10,10 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+// menu box
+const menuIcon = document.getElementById("menu-icon");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuIcon.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});

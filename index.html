@@ -15,17 +15,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: 14px;
@@ -37,119 +26,148 @@
 <body style="font-family: 'Noto Sans', sans-serif;">
 
     <!-- Header Section -->
-    <header class="max-w-[1440px] w-full h-[80px] mx-auto flex items-center bg-[#121212]">
+    <header class="w-full h-20 bg-[#121212]">
         <!-- Navbar section -->
-        <nav class="flex items-center max-w-[1200px] w-full mx-auto">
-            <!-- Logo -->
-            <div class="max-w-[126px] h-[25px]">
-                <img class="object-cover object-center" src="./imgs/logo.png" alt="Logo brend">
+        <nav class="container mx-auto flex items-center justify-between h-full">
+            <!-- Menu box -->
+            <div class="text-white text-3xl cursor-pointer md:hidden" id="menu-icon">
+                <i class="bx bx-menu"></i>
             </div>
+            <!-- Logo -->
+            <a href="./index.html" class="inline-block w-32 h-6">
+                <img class="object-cover object-center" src="./imgs/logo.png" alt="Logo brend">
+            </a>
             <!-- Navigation list -->
-            <ul class="flex items-center gap-6 ml-[55px]">
+            <ul class="hidden md:flex items-center gap-6 lg:ml-14">
                 <li>
-                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
-                        Products
-                    </a>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Products</a>
                 </li>
                 <li>
-                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
-                        Business Types
-                    </a>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Business Types</a>
                 </li>
                 <li>
-                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
-                        Who Are We?
-                    </a>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Who Are We?</a>
                 </li>
                 <li>
-                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
-                        Contact Us
-                    </a>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Contact Us</a>
                 </li>
                 <li>
-                    <a class="text-white font-normal text-[14px] leading-[19px]" href="#">
-                        Pricing
-                    </a>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Pricing</a>
                 </li>
             </ul>
-            <!-- Accoutn buttons -->
-            <div class="ml-auto h-[42px] my-auto flex gap-7">
+            <!-- Account buttons -->
+            <div class="hidden md:flex ml-auto items-center md:gap-3 gap-[2px]">
                 <button
-                    class="w-[126px] h-[40px] border-white hover:border-[#4D9DFF] transition-all duration-500 ease-in-out border-solid border-[1px] rounded-[55px] flex items-center justify-center font-normal text-[14px] leading-[19px] text-[#EAEAEA]">
+                    class="lg:w-32 lg:h-10 p-1 border border-white rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:border-blue-500 transition duration-500">
                     Sign in
                 </button>
                 <button
-                    class="w-[126px] h-[40px] bg-[#187AC9] hover:bg-[#4D9DFF] transition-all duration-500 ease-in-out rounded-[55px] flex items-center justify-center font-normal text-[14px] leading-[19px] text-[#EAEAEA]">
+                    class="lg:w-32 lg:h-10 p-1 bg-[#187AC9] rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:bg-blue-500 transition duration-500">
                     Get Started
                 </button>
             </div>
         </nav>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden w-[95%]  flex-col items-start bg-[#121212] relative z-10 text-white px-6 py-4 delay-2000 transition-all ease-in-out"
+            id="mobile-menu">
+            <ul class="space-y-4">
+                <li>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Products</a>
+                </li>
+                <li>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Business Types</a>
+                </li>
+                <li>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Who Are We?</a>
+                </li>
+                <li>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Pricing</a>
+                </li>
+            </ul>
+            <div class="mt-4 flex flex-col gap-3">
+                <button
+                    class="w-full h-10 border border-white rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:border-blue-500 transition duration-500">
+                    Sign in
+                </button>
+                <button
+                    class="w-full h-10 bg-[#187AC9] rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:bg-blue-500 transition duration-500">
+                    Get Started
+                </button>
+            </div>
+        </div>
     </header>
 
     <!-- Main Section -->
-    <main class="max-w-[1440px] w-full mx-auto">
+    <main class="w-full">
         <!-- Hero section -->
-        <section class="relative pt-[150px] h-[610px]">
+        <section class="relative pt-[150px] md:pt-[120px] h-[610px] md:h-auto">
+            <!-- Video background -->
             <div class="absolute left-0 top-0 -z-10 w-full h-full">
                 <video autoplay muted loop class="object-cover w-full h-full">
                     <source src="./imgs/background.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="w-[753px] mx-auto">
+            <!-- Main content -->
+            <div class="w-[90%] md:w-[753px] mx-auto text-center">
                 <h1 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                    data-aos-delay="100" class="text-white text-[60px] leading-[66px] text-center font-semibold">
+                    data-aos-delay="100"
+                    class="text-white text-[32px] md:text-[60px] leading-[40px] md:leading-[66px] font-semibold">
                     A Modern Approach to The ISO Industry
                 </h1>
                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                     data-aos-delay="100"
-                    class="text-white text-[20px] text-center leading-[30px] font-normal mt-[14px]">
+                    class="text-white text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] font-normal mt-4 md:mt-[14px]">
                     Whether you are starting your first ISO or a veteran ready to scale your business, we have the tools
                     you
                     need to beat the competition.
                 </p>
                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                    data-aos-delay="100" class="text-center mt-[25px]">
+                    data-aos-delay="100" class="mt-6 md:mt-[25px]">
                     <a href="#"
-                        class="inline-block py-3 px-6 hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out bg-white rounded-full text-gray-800 text-sm font-medium leading-5 shadow-md hover:shadow-lg">
+                        class="inline-block py-[9px] md:py-[11PX] px-[25px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out bg-white rounded-full text-gray-800 text-[13px] md:text-[14px] font-medium leading-5">
                         Get Started
                         <i class="bx bx-up-arrow-alt origin-center rotate-45 ml-2"></i>
                     </a>
                 </div>
             </div>
-            <div class="flex items-center absolute bottom-0 left-0 w-full h-[80px] bg-[#1E1E1E]">
-                <ul class="flex items-center justify-between max-w-[924px] w-full mx-auto">
-                    <li>
+            <!-- Logos section -->
+            <div class="flex items-center absolute bottom-0 left-0 w-full h-[80px] bg-[#1E1E1E] md:static md:mt-8">
+                <ul class="flex items-center justify-between max-w-[90%] md:max-w-[924px] w-full mx-auto">
+                    <li class="w-1/5 md:w-auto">
                         <a href="#">
                             <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center" src="./imgs/TSYS.png"
+                                data-aos-delay="100" class="object-cover object-center mx-auto" src="./imgs/TSYS.png"
                                 alt="TSYS card">
                         </a>
                     </li>
-                    <li>
+                    <li class="w-1/5 md:w-auto">
                         <a href="#">
                             <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center"
+                                data-aos-delay="100" class="object-cover object-center mx-auto"
                                 src="./imgs/Mastercard_2019_logo 1.png" alt="card">
                         </a>
                     </li>
-                    <li>
+                    <li class="w-1/5 md:w-auto">
                         <a href="#">
                             <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center" src="./imgs/AMEX.png"
+                                data-aos-delay="100" class="object-cover object-center mx-auto" src="./imgs/AMEX.png"
                                 alt="AMEX card">
                         </a>
                     </li>
-                    <li>
+                    <li class="w-1/5 md:w-auto">
                         <a href="#">
                             <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center" src="./imgs/Fiserv_logo.png"
-                                alt="Fiserv card">
+                                data-aos-delay="100" class="object-cover object-center mx-auto"
+                                src="./imgs/Fiserv_logo.png" alt="Fiserv card">
                         </a>
                     </li>
-                    <li>
+                    <li class="w-1/5 md:w-auto">
                         <a href="#">
                             <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center" src="./imgs/Visa.png"
+                                data-aos-delay="100" class="object-cover object-center mx-auto" src="./imgs/Visa.png"
                                 alt="Visa card">
                         </a>
                     </li>
@@ -157,66 +175,186 @@
             </div>
         </section>
         <!--  -->
-        <section class="pt-[56px] bg-[#121212]">
-            <div class="max-w-[1200px] mx-auto px-5 flex items-start">
-                <div class="max-w-[423px] w-full mt-[60px]">
+        <section class="md:pt-[56px] pt-[20px] bg-[#121212]">
+            <div class="max-w-[1200px] mx-auto px-5 flex flex-col lg:flex-row items-start ">
+                <!-- Left content -->
+                <div class="max-w-[423px] w-full mt-[30px] md:mt-[60px]">
                     <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="font-semibold text-[32px] text-white leading-[35px]">
+                        data-aos-delay="100"
+                        class="font-semibold text-[24px] md:text-[32px] text-white leading-[30px] md:leading-[35px]">
                         New Revenue Streams With Netevia Business Banking Services
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="font-medium text-[16px] text-white leading-[24px] mt-[29px]">
+                        data-aos-delay="100"
+                        class="font-medium text-[14px] md:text-[16px] text-white leading-[20px] md:leading-[24px] mt-[20px] md:mt-[29px]">
                         Earn new residual income from your merchant's account balances, card spend, and a one-time
                         welcome
                         bonus on newly activated and funded accounts.
                     </p>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="mt-[25px]">
+                        data-aos-delay="100" class="mt-[20px] md:mt-[25px]">
                         <a href="#"
-                            class="bg-white inline-block py-[11px] px-[25px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] text-[#121212] font-medium text-[14px] leading-[19px]">
+                            class="inline-block py-[9px] md:py-[11PX] px-[25px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out bg-white rounded-full text-gray-800 text-[13px] md:text-[14px] font-medium leading-5">
                             ISO Banking Program
                             <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                         </a>
                     </div>
                 </div>
-                <div class="max-w-[650px] w-full h-[700px] relative">
-                    <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="absolute top-0 left-0">
-                        <div style="background-color: transparent; background-image: linear-gradient(90deg, transparent, #187ac9 99.9%);"
-                            class="w-[361px] h-[361px] rounded-full"></div>
-                        <div class="w-[184px] mx-auto -translate-y-[210px]">
-                            <h3 class="text-white text-[20px] text-center leading-[22px] font-semibold">
-                                Card Spend
-                            </h3>
-                            <p class="text-white text-[14px] text-center leading-[15px] font-normal">
-                                Earn new residual income on your merchant's Netevia Debit card spend.
-                            </p>
+                <!-- Desktop -->
+                <div class="hidden md:flex flex-col items-center md:mt-[25px] mt-0">
+                    <div class="flex">
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100"
+                            style="background-color: transparent; background-image: linear-gradient(90deg, transparent, #187ac9 99.9%);"
+                            class="md:w-[361px] sm:w-[188px] w-[140px] md:h-[361px] sm:h-[188px] h-[140px] rounded-full flex items-center !translate-x-[20px] justify-center -rotate-90">
+                            <div class="rotate-90 max-w-[102px] md:max-w-[184px] text-center">
+                                <h3 class="text-white text-xs md:text-[20px] text-center leading-[22px] font-semibold">
+                                    Card Spend
+                                </h3>
+                                <p class="text-white text-[10px] md:text-[14px] text-center leading-[15px] font-normal">
+                                    Earn new residual income on your merchant's Netevia Debit card spend.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100"
+                            style="background-color: transparent; background-image: linear-gradient(180deg, transparent, #187ac9 99.9%);"
+                            class="md:w-[361px] sm:w-[188px] w-[140px] md:h-[361px] sm:h-[188px] h-[140px] rounded-full flex items-center justify-center !-translate-x-[20px]">
+                            <div class="max-w-[102px] md:max-w-[184px] text-center">
+                                <h3 class="text-white text-xs md:text-[20px] text-center leading-[22px] font-semibold">
+                                    Account Balances
+                                </h3>
+                                <p class="text-white text-[10px] md:text-[14px] text-center leading-[15px] font-normal">
+                                    Earn residual income
+                                    on your merchant's average account monthly balances.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="absolute top-0 right-0">
-                        <div style="background-color: transparent; background-image: linear-gradient(180deg, transparent, #187ac9 99.9%);"
-                            class="w-[361px] h-[361px] rounded-full"></div>
-                        <div class="w-[184px] mx-auto -translate-y-[210px]">
-                            <h3 class="text-white text-[20px] text-center leading-[22px] font-semibold">
-                                Account Balances
-                            </h3>
-                            <p class="text-white text-[14px] text-center leading-[15px] font-normal">
-                                Earn residual income
-                                on your merchant's average account monthly balances.
-                            </p>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="absolute bottom-0 left-1/4">
-                        <div style="background-color: transparent; background-image: linear-gradient(0deg, transparent, #187ac9 100%);"
-                            class="w-[361px] h-[361px] rounded-full"></div>
-                        <div class="w-[184px] mx-auto -translate-y-[210px]">
-                            <h3 class="text-white text-[20px] text-center leading-[22px] font-semibold">
+                        data-aos-delay="100"
+                        style="background-color: transparent; background-image: linear-gradient(0deg, transparent, #187ac9 100%);"
+                        class="md:w-[361px] sm:w-[188px] w-[140px] md:h-[361px] sm:h-[188px] h-[140px] translate-x-5  md:!translate-x-1 rounded-full flex items-center justify-center -translate-y-10 md:!-translate-y-[130px]">
+                        <div class="max-w-[102px] md:max-w-[184px] text-center">
+                            <h3 class="text-white text-xs md:text-[20px] text-center leading-[22px] font-semibold">
                                 New Account Bonus
                             </h3>
-                            <p class="text-white text-[14px] text-center leading-[15px] font-normal">
+                            <p class="text-white text-[10px] md:text-[14px] text-center leading-[15px] font-normal">
                                 Get paid a one-time upfront bonus on newly activated and funded accounts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile -->
+                <div class="w-full flex md:hidden flex-col items-center my-10">
+                    <div class="flex">
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100"
+                            class="w-[160px] h-[160px] relative rounded-full flex items-center justify-center !translate-x-[25px]">
+                            <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 189 189" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_1_5741" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="189" height="189">
+                                    <circle opacity="0.8" cx="94.325" cy="94.325" r="94.325"
+                                        transform="rotate(-90 94.325 94.325)" fill="url(#paint0_linear_1_5741)" />
+                                </mask>
+                                <g mask="url(#mask0_1_5741)">
+                                    <circle cx="94.325" cy="94.325" r="94.325" transform="rotate(-90 94.325 94.325)"
+                                        fill="url(#paint1_linear_1_5741)" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_5741" x1="94.325" y1="0" x2="94.325" y2="188.65"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121212" stop-opacity="0.1" />
+                                        <stop offset="1" stop-color="#121212" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_1_5741" x1="94.325" y1="0" x2="94.325"
+                                        y2="188.467" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121212" />
+                                        <stop offset="1" stop-color="#187AC9" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="max-w-[126px] text-center relative">
+                                <h3 class="text-xs mb-2 md:mb-4 font-semibold text-white">
+                                    Card Spend
+                                </h3>
+                                <p class="text-[10px] md:text-sm text-white">
+                                    Earn new residual income on your merchant's Netevia Debit card spend.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100"
+                            class="w-[160px] h-[160px] relative rounded-full flex items-center justify-center !-translate-x-[25px">
+                            <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 189 189" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_1_5734" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="189" height="189">
+                                    <circle opacity="0.8" cx="94.325" cy="94.325" r="94.325"
+                                        transform="matrix(0 -1 -1 0 189 188.65)" fill="url(#paint0_linear_1_5734)" />
+                                </mask>
+                                <g mask="url(#mask0_1_5734)">
+                                    <circle cx="94.325" cy="94.325" r="94.325" transform="matrix(0 -1 -1 0 189 188.65)"
+                                        fill="url(#paint1_linear_1_5734)" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_5734" x1="94.325" y1="0" x2="94.325" y2="188.65"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121212" stop-opacity="0.1" />
+                                        <stop offset="1" stop-color="#121212" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_1_5734" x1="94.325" y1="0" x2="94.325"
+                                        y2="188.467" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121212" />
+                                        <stop offset="1" stop-color="#187AC9" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="max-w-[126px] text-center relative">
+                                <h3 class="text-xs mb-2 md:mb-4 font-semibold text-white">
+                                    Account Balances
+                                </h3>
+                                <p class="text-[10px] md:text-sm text-white">
+                                    Earn residual income
+                                    on your merchant's average account
+                                    monthly balances.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100"
+                        class="w-[160px] h-[160px] relative rounded-full flex items-center justify-center !-translate-y-[65px]">
+                        <svg class="absolute top-0 left-0" viewBox="0 0 190 190" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1_5748" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="190" height="190">
+                                <circle opacity="0.8" cx="94.7832" cy="94.8425" r="94.325"
+                                    fill="url(#paint0_linear_1_5748)" />
+                            </mask>
+                            <g mask="url(#mask0_1_5748)">
+                                <circle cx="94.7832" cy="94.8425" r="94.325" fill="url(#paint1_linear_1_5748)" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_1_5748" x1="94.7832" y1="0.517578" x2="94.7832"
+                                    y2="189.167" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#121212" stop-opacity="0.1" />
+                                    <stop offset="1" stop-color="#121212" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1_5748" x1="94.7832" y1="189.167" x2="94.7832"
+                                    y2="0.517578" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#121212" />
+                                    <stop offset="1" stop-color="#187AC9" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="max-w-[126px] text-center relative">
+                            <h3 class="text-xs mb-2 md:mb-4 font-semibold text-white">
+                                Card Spend
+                            </h3>
+                            <p class="text-[10px] md:text-sm text-white">
+                                Earn new residual income on your merchant's Netevia Debit card spend.
                             </p>
                         </div>
                     </div>
@@ -224,33 +362,34 @@
             </div>
         </section>
         <!--  -->
-        <section class="bg-[#EFF0ED]">
+        <section class="bg-[#EFF0ED] p-8">
             <!--  -->
-            <div class="w-full pt-20 max-w-[1200px] mx-auto">
-                <div class="w-full pb-[83px] bg-[#121212] rounded-[30px]">
-                    <div class="w-[639px] mx-auto pt-[62px]">
+            <div class="w-full md:pt-20 pt-10 max-w-[1200px] mx-auto">
+                <div class="md:pb-[83px] px-8 pb-10 bg-[#121212] rounded-[30px]">
+                    <div class="max-w-[639px] w-full mx-auto pt-[40px] md:pt-[62px]">
                         <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-semibold text-white text-[48px] text-center leading-[53px]">
+                            class="font-semibold text-white text-[32px] md:text-[48px] md:text-center leading-[35px] md:leading-[53px]">
                             Easy Onboarding Process of New Merchants
                         </h2>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-medium text-white text-[18px] text-center leading-[27px] mt-[23px]">
+                            class="font-medium text-[#F1F1F1] text-[14px] md:text-[18px] md:text-center leading-[19px] md:leading-[27px] mt-[23px]">
                             Seamlessly onboard, underwrite, and support your merchants throughout their life cycle with
                             our
                             ISO Merchant Management Platform.
                         </p>
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="text-center mt-[17px]">
+                            data-aos-delay="100" class="md:text-center mt-[17px]">
                             <a href="#"
-                                class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-white font-medium text-[#121212] text-[14px] leading-[19px]">
+                                class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-white font-medium text-[#121212] text-[13px] md:text-[14px] leading-[19px]">
                                 Get Started
                                 <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                             </a>
                         </div>
                     </div>
-                    <div class="max-w-[960px] w-full mt-[74px] mx-auto flex gap-[30px] items-center">
+                    <div
+                        class="max-w-[960px] w-full mt-[74px] mx-auto flex md:flex-row flex-col gap-[30px] items-center">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             class="max-w-[300px] w-full py-[30px] px-5 bg-[#1E1E1E] rounded-[22px]">
@@ -265,7 +404,7 @@
                             </div>
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="mt-[14px] font-semibold text-[22px] text-white leading-[26px]">
+                                class="mt-[14px] font-semibold text-[18px] md:text-[22px] text-white leading-[26px]">
                                 Custom Online Application
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -291,7 +430,7 @@
                             </div>
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="mt-[14px] font-semibold text-[22px] text-white leading-[26px]">
+                                class="mt-[14px] font-semibold text-[18px] md:text-[22px] text-white leading-[26px]">
                                 Transparent Underwriting Process
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -326,7 +465,7 @@
                             </div>
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="mt-[14px] font-semibold text-[22px] text-white leading-[26px]">
+                                class="mt-[14px] font-semibold text-[18px] md:text-[22px] text-white leading-[26px]">
                                 Customer Service & Support
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -341,16 +480,16 @@
                 </div>
             </div>
             <!--  -->
-            <div class="max-w-[1200px] w-full pt-20 mx-auto">
+            <div class="max-w-[1200px] w-full pt-10 md:pt-20 mx-auto">
                 <div class="max-w-[753px] w-full mx-auto">
                     <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="font-semibold text-[#121212] text-[48px] text-center leading-[53px]">
+                        class="font-semibold text-[#121212] text-[32px] md:text-[48px] md:text-center leading-[35px] md:leading-[53px]">
                         The Power of Payments & Banking Combined
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="mt-[30px] font-medium text-[#121212] text-[20px] text-center leading-[30px]">
+                        class="mt-5 md:mt-[30px] font-medium text-[#121212] text-[14px] md:text-[20px] md:text-center leading-[16px] md:leading-[30px]">
                         Combine the power of payments & banking to improve your merchant's
                         cash flow and access a new suite of financial tools for your merchants.
                     </p>
@@ -365,22 +504,31 @@
                 </div>
             </div>
             <!--  -->
-            <div
-                class="max-w-[960px] mt-[60px] mx-auto grid grid-cols-[470px_470px] grid-rows-[209px_209px_209px] gap-5 pb-[86px]">
+            <div class="max-w-[960px] mt-10 md:mt-[60px] mx-auto grid md:grid-cols-2 gap-3 md:gap-5 md:pb-[86px]">
+                <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="100"
+                    class="md:hidden flex bg-white rounded-[22px] row-span-3 items-center justify-center">
+                    <video data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100" class="h-full w-full rounded-[22px]"
+                        src="https://netevia.com/wp-content/themes/netevia-dark/assets/other/iso-in-a-box-ffffff.mp4"
+                        autoplay muted loop></video>
+                </div>
                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                     data-aos-delay="100" class="bg-white p-5 rounded-[22px] ]">
                     <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        class="font-semibold text-[28px] text-[#121212] leading-[33px]">
+                        class="font-semibold text-[16px] md:text-[28px] text-[#121212] leading-[19px] md:leading-[33px]">
                         Multiply Your Portfolio's Value
                     </h3>
-                    <p data-aos-delay="100" class="font-normal text-[20px] text-[#121212] leading-6 mt-[63px]">
+                    <p data-aos-delay="100"
+                        class="font-normal text-[12px] md:text-[20px] text-[#121212] leading-[14px] md:leading-6 mt-10 md:mt-[63px]">
                         Multiply the value of your portfolio
                         by upselling Netevia Banking
                         to it or offering it to new merchants.
                     </p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                    data-aos-delay="100" class="bg-white rounded-[22px] row-span-3 flex items-center justify-center">
+                    data-aos-delay="100"
+                    class="hidden md:flex bg-white rounded-[22px] row-span-3 items-center justify-center">
                     <video data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100" class="h-full w-full rounded-[22px]"
                         src="https://netevia.com/wp-content/themes/netevia-dark/assets/other/iso-in-a-box-ffffff.mp4"
@@ -389,10 +537,11 @@
                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                     data-aos-delay="150" class="bg-white p-5 rounded-[22px]">
                     <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        class="font-semibold text-[28px] text-[#121212] leading-[33px]">
+                        class="font-semibold text-[16px] md:text-[28px] text-[#121212] leading-[19px] md:leading-[33px]">
                         Increased Customer Retention
                     </h3>
-                    <p data-aos-delay="100" class="font-normal text-[20px] text-[#121212] leading-6 mt-[63px]">
+                    <p data-aos-delay="100"
+                        class="font-normal text-[12px] md:text-[20px] text-[#121212] leading-[14px] md:leading-6 mt-10 md:mt-[63px]">
                         Grow your merchant retention rate
                         by offering an ecosystem of products
                         that increases your customer's lifetime value.
@@ -401,10 +550,11 @@
                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                     data-aos-delay="200" class="bg-[#121212] rounded-[22px] p-5">
                     <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        class="font-semibold text-[28px] text-white leading-[33px]">
+                        class="font-semibold text-[16px] md:text-[28px] text-white leading-[19px] md:leading-[33px]">
                         Instant Deposits for Merchants
                     </h3>
-                    <p data-aos-delay="100" class="font-normal text-[20px] text-white leading-6 mt-[63px]">
+                    <p data-aos-delay="100"
+                        class="font-normal text-[12px] md:text-[20px] text-white leading-[14px] md:leading-6 mt-10 md:mt-[63px]">
                         Give your merchants instant funding
                         for free and let them get their hard-earned money quicker.
                     </p>
@@ -412,37 +562,40 @@
             </div>
         </section>
         <!--  -->
-        <section class="bg-[#121212]">
-            <div class="max-w-[1200px] mx-auto py-20">
-                <div class="w-[701px] mx-auto">
+        <section class="bg-[#121212] px-8">
+            <div class="max-w-[1200px] mx-auto py-10 md:py-20">
+                <div class="max-w-[701px] w-full mx-auto">
                     <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="font-semibold text-white text-[48px] text-center leading-[53px]">
+                        data-aos-delay="100"
+                        class="font-semibold text-white text-[32px] md:text-[48px] md:text-center leading-[35px] md:leading-[53px]">
                         A Partnership to Fuel Growth
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="font-medium text-white text-[20px] text-center leading-[30px] mt-[30px] mx-12">
+                        class="font-medium text-white text-[14px] md:text-[20px] md:text-center leading-[30px] mt-[30px] md:mx-12">
                         We reinvented the ISO program to focus on giving
                         our partners all the tools to grow and build a future-proof business so that they can multiply
                         their portfolio value.
                     </p>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="text-center mt-[20px]">
+                        data-aos-delay="100" class="md:text-center mt-[20px]">
                         <a href="#"
-                            class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-white font-medium text-[#121212] text-[14px] leading-[19px]">
+                            class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-white font-medium text-[#121212] text-[13px] md:text-[14px] leading-[19px]">
                             Get Started
                             <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                         </a>
                     </div>
                 </div>
-                <div class="px-[160px] mt-[60px] flex flex-wrap gap-x-[120px] gap-y-[80px]">
+                <div
+                    class="grid md:grid-cols-2 gap-5 max-w-[990px] mx-auto justify-between w-full relative mt-10 md:mt-[60px] ">
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="max-w-[333px] w-full">
+                        data-aos-delay="100"
+                        class="max-w-[333px] w-full flex items-start flex-row md:flex-col gap-[10px] bg-[#1E1E1E] p-4 rounded-[221px]">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             style="background-image: linear-gradient(73.21deg, #187AC9 0%, #C5D6E3 100%);"
                             class="w-5 h-5 rounded-full"></div>
-                        <div class="mt-[30px] w-full">
+                        <div class="md:mt-5 w-full">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-white text-[20px] leading-[22px]">
                                 Marketing Tools
@@ -457,12 +610,13 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="max-w-[333px] w-full">
+                        data-aos-delay="100"
+                        class="max-w-[333px] w-full flex items-start flex-row md:flex-col gap-[10px] bg-[#1E1E1E] p-4 rounded-[221px]">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             style="background-image: linear-gradient(73.21deg, #187AC9 0%, #C5D6E3 100%);"
                             class="w-5 h-5 rounded-full"></div>
-                        <div class="mt-[30px] w-full">
+                        <div class="md:mt-5 w-full">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-white text-[20px] leading-[22px]">
                                 Marketing Tools
@@ -477,12 +631,13 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="max-w-[333px] w-full">
+                        data-aos-delay="100"
+                        class="max-w-[333px] w-full flex items-start flex-row md:flex-col gap-[10px] bg-[#1E1E1E] p-4 rounded-[221px]">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             style="background-image: linear-gradient(73.21deg, #187AC9 0%, #C5D6E3 100%);"
                             class="w-5 h-5 rounded-full"></div>
-                        <div class="mt-[30px] w-full">
+                        <div class="md:mt-5 w-full">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-white text-[20px] leading-[22px]">
                                 Marketing Tools
@@ -497,12 +652,13 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="max-w-[333px] w-full">
+                        data-aos-delay="100"
+                        class="max-w-[333px] w-full flex items-start flex-row md:flex-col gap-[10px] bg-[#1E1E1E] p-4 rounded-[221px]">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             style="background-image: linear-gradient(73.21deg, #187AC9 0%, #C5D6E3 100%);"
                             class="w-5 h-5 rounded-full"></div>
-                        <div class="mt-[30px] w-full">
+                        <div class="md:mt-5 w-full">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-white text-[20px] leading-[22px]">
                                 Marketing Tools
@@ -520,31 +676,38 @@
             </div>
         </section>
         <!--  -->
-        <section class="bg-[#EFF0ED] py-20">
-            <div class="bg-white max-w-[1200px] w-full mx-auto rounded-[30px] pt-[54px] px-[50px] flex">
+        <section class="bg-[#EFF0ED] py-10 md:py-20">
+            <div
+                class="bg-white max-w-[1200px] w-full mx-auto rounded-[30px] py-10 md:py-[54px] px-8 md:px-[50px] flex md:flex-row flex-col justify-between">
                 <div>
-                    <div class="max-w-[478px]">
+                    <div class="max-w-[478px] w-full">
                         <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="font-semibold text-[48px] text-[#121212] leading-[52px]">
+                            data-aos-delay="100"
+                            class="font-semibold text-[32px] md:text-[48px] text-[#121212] leading-[35px] md:leading-[52px]">
                             Netevia Capital
                         </h2>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="mt-[30px] font-normal text-[20px] text-[#121212] leading-[27px]">
+                            class="mt-5 md:mt-[30px] font-normal text-[18px] md:text-[20px] text-[#121212] leading-[22px] md:leading-[27px]">
                             Get access to a completely passive revenue stream by offering business loans to help drive
                             your merchant's business growth with Netevia Capital.
                         </p>
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="mt-[25px]">
+                            data-aos-delay="100" class="mt-10 md:mt-[25px]">
                             <a href="#"
-                                class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[14px] leading-[19px]">
+                                class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[13px] md:text-[14px] leading-[19px]">
                                 Start here
                                 <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                             </a>
                         </div>
                     </div>
-                    <div class="max-w-[724px] w-full mt-[197px] flex gap-5">
-                        <div class="max-w-[223px] h-[108px]">
+                    <div class="block md:hidden mt-10">
+                        <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" src="./imgs/Phone.png" alt="Iphone 13 Pro Netevia img"
+                            class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="hidden md:flex max-w-[724px] w-full lg:mt-[150px] mt-[80px] gap-5">
+                        <div class="max-w-[223px]">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-[20px] text-[#121212] leading-[22px]">
                                 Drive Business Growth
@@ -557,7 +720,7 @@
                                 to customized loan offers based on their card sales.
                             </p>
                         </div>
-                        <div class="max-w-[238px] h-[108px]">
+                        <div class="max-w-[238px]">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-[20px] text-[#121212] leading-[22px]">
                                 No Application Required
@@ -569,7 +732,7 @@
                                 Banking Services without extra paperwork needed.
                             </p>
                         </div>
-                        <div class="max-w-[223px] h-[108px]">
+                        <div class="max-w-[223px]">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-[20px] text-[#121212] leading-[22px]">
                                 Passive Income
@@ -583,61 +746,104 @@
                         </div>
                     </div>
                 </div>
-                <div class="-translate-y-[100px]">
+                <div class="hidden md:block -translate-y-[100px]">
                     <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100" src="./imgs/Phone.png" alt="Iphone 13 Pro Netevia img"
                         class="object-cover object-center">
                 </div>
+                <div class="md:hidden w-full mt-10 flex flex-col gap-5">
+                    <div class="w-full">
+                        <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="font-semibold text-[20px] text-[#121212] leading-[22px]">
+                            Drive Business Growth
+                        </h3>
+                        <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100"
+                            class="font-normal text-[16px] text-[#121212] leading-[17px] mt-[14px] opacity-80">
+                            Help your merchants grow
+                            by giving them access
+                            to customized loan offers based on their card sales.
+                        </p>
+                    </div>
+                    <div class="w-full">
+                        <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="font-semibold text-[20px] text-[#121212] leading-[22px]">
+                            No Application Required
+                        </h3>
+                        <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100"
+                            class="font-normal text-[16px] text-[#121212] leading-[17px] mt-[14px] opacity-80">
+                            Available for merchants using Payment and
+                            Banking Services without extra paperwork needed.
+                        </p>
+                    </div>
+                    <div class="w-full">
+                        <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="font-semibold text-[20px] text-[#121212] leading-[22px]">
+                            Passive Income
+                        </h3>
+                        <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100"
+                            class="font-normal text-[16px] text-[#121212] leading-[17px] mt-[14px] opacity-80">
+                            Your pre-approved merchants receive their
+                            loan offers within their banking dashboard.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
         <!--  -->
-        <section class="bg-[#121212]">
-            <div class="max-w-[960px] mx-auto py-20">
-                <div class="w-[633px]">
+        <section class="bg-[#121212] py-10 md:py-20 px-8">
+            <div class="max-w-[960px] mx-auto">
+                <div class="max-w-[633px] w-full">
                     <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="font-semibold text-white text-[48px] leading-[53px]">
+                        data-aos-delay="100"
+                        class="font-semibold text-white text-[32px] md:text-[48px] leading-[35px] md:leading-[53px]">
                         Netevia ISO Fund
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="font-medium text-white text-[20px] leading-[30px] mt-[30px]">
+                        data-aos-delay="100"
+                        class="font-medium text-white text-[14px] md:text-[20px] leading-[19px] md:leading-[30px] mt-5 md:mt-[30px]">
                         We created a unique program called the Netevia ISO Fund.
                         It is a residual-based financing program to boost the growth of our ISOs and enable them to hire
                         more employees or purchase more equipment without requiring an upfront investment. </p>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100" class="mt-[20px]">
                         <a href="#"
-                            class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-white font-medium text-[#121212] text-[14px] leading-[19px]">
+                            class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-white font-medium text-[#121212] text-[13px] md:text-[14px] leading-[19px]">
                             Get Started
                             <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                         </a>
                     </div>
                 </div>
-                <div class="w-full mt-[60px] flex flex-wrap gap-[20px]">
+                <div class="w-full mt-10 md:mt-[60px] grid grid-cols-1 md:grid-cols-3 gap-y-3 md:gap-x-6">
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="max-w-[305px] w-full p-5 bg-[#1E1E1E] rounded-[12px]">
-                        <div class="mt-[36px] w-full">
+                        data-aos-delay="100" class="bg-[#1E1E1E] rounded-xl p-5">
+                        <div class="mt-0 md:mt-[36px] w-full">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="font-semibold text-white text-[24px] leading-[26px]">
+                                data-aos-delay="100"
+                                class="font-semibold text-white text-[22px] md:text-[24px] leading-[26px]">
                                 Financing for the ISO Industry
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="mt-[14px] font-normal text-[16px] text-white leading-[17px]">
+                                class="mt-10 font-normal text-[14px] md:text-[16px] text-white leading-[17px]">
                                 Netevia boosts our ISO partners' growth by allowing them to leverage their portfolio's
                                 residual payments to access a line of credit.
                             </p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="max-w-[305px] w-full p-5 bg-[#1E1E1E] rounded-[12px]">
-                        <div class="mt-[36px] w-full">
+                        data-aos-delay="100" class="bg-[#1E1E1E] rounded-xl p-5">
+                        <div class="mt-0 md:mt-[36px] w-full">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="font-semibold text-white text-[24px] leading-[26px]">
+                                data-aos-delay="100"
+                                class="font-semibold text-white text-[22px] md:text-[24px] leading-[26px]">
                                 Repay from Residuals
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="mt-[14px] font-normal text-[16px] text-white leading-[17px]">
+                                class="mt-10 font-normal text-[14px] md:text-[16px] text-white leading-[17px]">
                                 We will collect a portion
                                 of your residual payment
                                 every month and automatically apply it to your balance.
@@ -645,15 +851,16 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="max-w-[305px] w-full p-5 bg-[#1E1E1E] rounded-[12px]">
-                        <div class="mt-[36px] w-full">
+                        data-aos-delay="100" class="bg-[#1E1E1E] rounded-xl p-5">
+                        <div class="mt-0 md:mt-[36px] w-full">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="font-semibold text-white text-[24px] leading-[26px]">
+                                data-aos-delay="100"
+                                class="font-semibold text-white text-[22px] md:text-[24px] leading-[26px]">
                                 Boost Business Growth
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="mt-[14px] font-normal text-[16px] text-white leading-[17px]">
+                                class="mt-10 font-normal text-[14px] md:text-[16px] text-white leading-[17px]">
                                 Use the financing to hire employees, try new marketing initiatives, or purchase
                                 equipment to drive business growth.
                             </p>
@@ -663,39 +870,42 @@
             </div>
         </section>
         <!--  -->
-        <section class="bg-[#EFF0ED] py-20">
+        <section class="bg-[#EFF0ED] py-10 md:py-20 px-8">
             <!--  -->
             <div class="max-w-[1200px] w-full mx-auto">
-                <div class="max-w-[490px]">
+                <div class="max-w-[490px] w-full">
                     <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="font-semibold text-[#121212] text-[60px] leading-[66px]">
+                        data-aos-delay="100"
+                        class="font-semibold text-[#121212] text-[32px] md:text-[60px] leading-[35px] md:leading-[66px]">
                         BIN Sponsorship Program
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="font-normal text-[#121212] text-[20px] leading-[27px] mt-[30px]">
+                        data-aos-delay="100"
+                        class="font-normal text-[#121212] text-[14px] md:text-[20px] leading-[16px] md:leading-[27px] mt-[30px]">
                         Your merchants are your customers. It is only logical that you have merchant portability,
                         allowing you to move your portfolio as you see fit.
                     </p>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100" class="mt-[20px]">
                         <a href="#"
-                            class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[14px] leading-[19px]">
+                            class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[13px] md:text-[14px] leading-[19px]">
                             Get Started
                             <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                         </a>
                     </div>
                 </div>
-                <div class="w-full flex gap-[23px] mt-10">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10">
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="max-w-[384px] w-full h-[288px] rounded-[20px] p-[22px] bg-white flex flex-col justify-between">
+                        class="md:max-w-[350px] w-full h-[160px] md:h-[284px] rounded-[20px] p-5 bg-white flex flex-col justify-between">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="font-semibold text-[32px] leading-[38px] text-[#121212]">
+                            data-aos-delay="100"
+                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-[#121212]">
                             Better Pricing
                         </h3>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-medium text-[22px] leading-[26px] text-[#121212] opacity-70">
+                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-[#121212] !opacity-70">
                             Offer your merchants
                             better pricing structures
                             and take advantage
@@ -704,14 +914,15 @@
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="max-w-[384px] w-full rounded-[20px] p-[22px] bg-white flex flex-col justify-between">
+                        class="md:max-w-[350px] w-full h-[160px] md:h-[284px] rounded-[20px] p-5 bg-white flex flex-col justify-between">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="font-semibold text-[32px] leading-[38px] text-[#121212]">
+                            data-aos-delay="100"
+                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-[#121212]">
                             Become a Partner
                         </h3>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-medium text-[22px] leading-[26px] text-[#121212] opacity-70">
+                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-[#121212] !opacity-70">
                             Become a partner
                             with Netevia and get
                             access to the most robust
@@ -720,13 +931,15 @@
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="max-w-[384px] w-full rounded-[20px] p-[22px] bg-black !-translate-y-[150px] flex flex-col justify-between">
+                        class="md:max-w-[350px] w-full h-[160px] md:h-[284px] rounded-[20px] p-5 bg-black lg:!-translate-y-[150px] flex flex-col justify-between">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="font-semibold text-[32px] leading-[38px] text-white">
-                            Win & Retain <br> Merchants
+                            data-aos-delay="100"
+                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-white">
+                            Win & Retain Merchants
                         </h3>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="font-medium text-[22px] leading-[26px] text-white opacity-70">
+                            data-aos-delay="100"
+                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-white !opacity-70">
                             Get access to clear yet
                             flexible underwriting criteria
                             and the appropriate level
@@ -740,19 +953,19 @@
                 <div class="max-w-[729px] mx-auto">
                     <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="font-semibold text-[#121212] text-[60px] leading-[66px] text-center">
-                        Hardware & Software <br> for All Industries
+                        class="font-semibold text-[#121212] text-[48px] md:text-[60px] leading-[52px] md:leading-[66px] md:text-center">
+                        Hardware & Software for All Industries
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="font-medium text-[#121212] text-[22px] leading-[33px] text-center mt-[30px]">
+                        class="font-medium text-[#121212] text-[20px] md:text-[22px] leading-[33px] md:text-center mt-5 md:mt-[30px]">
                         At Netevia, we spend our time ensuring we have the best hardware and software for a wide range
                         of verticals to allow our ISOs to excel in whatever industry they want to sell to.
                     </p>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="text-center mt-[20px]">
+                        data-aos-delay="100" class="md:text-center mt-[20px]">
                         <a href="#"
-                            class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[14px] leading-[19px]">
+                            class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[13px] md:text-[14px] leading-[19px]">
                             Get Started
                             <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                         </a>
@@ -760,19 +973,19 @@
                 </div>
             </div>
             <!-- Swiper section -->
-            <div class="max-w-[1200px] w-full mx-auto mt-[80px] flex justify-between relative">
-                <div class="swiper mySwiper">
+            <div class="max-w-[1200px] w-full mx-auto mt-10 md:mt-20 flex justify-between relative">
+                <div class="swiper mySwiper w-full h-full">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="max-w-[531px] w-full h-[278px] my-auto">
+                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3">
+                            <div class="max-w-[531px] w-full my-auto">
                                 <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
-                                    class="font-semibold text-[#121212] text-[48px] leading-[52px]">
+                                    class="font-semibold text-[#121212] text-[32px] md:text-[48px] leading-[32px] md:leading-[52px]">
                                     Netevia Terminals
                                 </h3>
                                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
-                                    class="font-normal text-[#121212] text-[24px] leading-[31px] mt-[40px]">
+                                    class="font-normal text-[#121212] text-[14px] md:text-[24px] leading-[16px] md:leading-[31px] mt-5 md:mt-10">
                                     The Netevia N Series terminals, integrated
                                     with our POS GO software, represent
                                     our handheld smart terminal solution designed to cater to various industries.
@@ -780,16 +993,16 @@
                                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100" class="mt-[20px]">
                                     <a href="#"
-                                        class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[14px] leading-[19px]">
+                                        class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[13px] md:text-[14px] leading-[19px]">
                                         Get Started
                                         <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="max-w-[585px] h-[600px] relative">
+                            <div class="max-w-[585px] w-full relative">
                                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
-                                    class="w-full h-full bg-[#E9E9E9] rounded-[20px] p-[35px] relative flex items-center justify-center">
+                                    class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
                                     <img data-aos="fade-up" data-aos-duration="900"
                                         data-aos-anchor-placement="top-bottom" data-aos-delay="100"
                                         src="./imgs/swiper logo1.png" alt="Swiper logo img 1"
@@ -797,29 +1010,30 @@
                                     <img data-aos="fade-up" data-aos-duration="900"
                                         data-aos-anchor-placement="top-bottom" data-aos-delay="100"
                                         src="./imgs/swiper img1.png" alt="Swiper img 1"
-                                        class="w-[433px] h-[346px] object-cover object-center">
+                                        class="md:w-full h-[198px] max-w-[433px] object-cover object-center">
                                 </div>
                                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" class="w-[110px] h-[40px] absolute bottom-[35px] left-[35px]">
+                                    data-aos-delay="100"
+                                    class="w-[80px] md:w-[110px] h-[40px] absolute bottom-[20px] md:bottom-[35px] md:left-[35px] left-0">
                                     <div
-                                        class="swiper-button-next w-[40px] h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
+                                        class="swiper-button-next w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
                                     </div>
                                     <div
-                                        class="swiper-button-prev w-[40px] h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
+                                        class="swiper-button-prev w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="max-w-[531px] w-full h-[278px] my-auto">
+                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3">
+                            <div class="max-w-[531px] w-full my-auto">
                                 <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
-                                    class="font-semibold text-[#121212] text-[48px] leading-[52px]">
+                                    class="font-semibold text-[#121212] text-[32px] md:text-[48px] leading-[32px] md:leading-[52px]">
                                     PAX Hardware
                                 </h3>
                                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
-                                    class="font-normal text-[#121212] text-[24px] leading-[31px] mt-[40px]">
+                                    class="font-normal text-[#121212] text-[14px] md:text-[24px] leading-[16px] md:leading-[31px] mt-5 md:mt-10">
                                     We are bringing PAX hardware into the Netevia ecosystem. Experience the Elys
                                     Workstation with our software partner, On The Fly POS, or the A920 with Netevia POS
                                     GO.
@@ -827,15 +1041,15 @@
                                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100" class="mt-[20px]">
                                     <a href="#"
-                                        class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[14px] leading-[19px]">
+                                        class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[13px] md:text-[14px] leading-[19px]">
                                         Get Started
                                         <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="max-w-[585px] h-[600px] relative">
+                            <div class="max-w-[585px] w-full relative">
                                 <div
-                                    class="w-full h-full bg-[#E9E9E9] rounded-[20px] p-[35px] relative flex items-center justify-center">
+                                    class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
                                     <img data-aos="fade-up" data-aos-duration="900"
                                         data-aos-anchor-placement="top-bottom" data-aos-delay="100"
                                         src="./imgs/swiper logo2.png" alt="Swiper logo img 1"
@@ -843,29 +1057,30 @@
                                     <img data-aos="fade-up" data-aos-duration="900"
                                         data-aos-anchor-placement="top-bottom" data-aos-delay="100"
                                         src="./imgs/swiper img2.png" alt="Swiper img 1"
-                                        class="w-[433px] h-[346px] object-cover object-center">
+                                        class="md:w-full h-[198px] max-w-[433px] object-cover object-center">
                                 </div>
                                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" class="w-[110px] h-[40px] absolute bottom-[35px] left-[35px]">
+                                    data-aos-delay="100"
+                                    class="w-[80px] md:w-[110px] h-[40px] absolute bottom-[20px] md:bottom-[35px] md:left-[35px] left-0">
                                     <div
-                                        class="swiper-button-next w-[40px] h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
+                                        class="swiper-button-next w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
                                     </div>
                                     <div
-                                        class="swiper-button-prev w-[40px] h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
+                                        class="swiper-button-prev w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="max-w-[531px] w-full h-[278px] my-auto">
+                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3">
+                            <div class="max-w-[531px] w-full my-auto">
                                 <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
-                                    class="font-semibold text-[#121212] text-[48px] leading-[52px]">
+                                    class="font-semibold text-[#121212] text-[32px] md:text-[48px] leading-[32px] md:leading-[52px]">
                                     Clover Hardware
                                 </h3>
                                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
-                                    class="font-normal text-[#121212] text-[24px] leading-[31px] mt-[40px]">
+                                    class="font-normal text-[#121212] text-[14px] md:text-[24px] leading-[16px] md:leading-[31px] mt-5 md:mt-10">
                                     We enhanced the typical Clover POS
                                     with our software partner, OrderOut. Let your merchants connect 3rd-party delivery
                                     platforms to their Clover POS system automatically.
@@ -873,15 +1088,15 @@
                                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100" class="mt-[20px]">
                                     <a href="#"
-                                        class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[14px] leading-[19px]">
+                                        class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[13px] md:text-[14px] leading-[19px]">
                                         Get Started
                                         <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="max-w-[585px] h-[600px] relative">
+                            <div class="max-w-[585px] w-full relative">
                                 <div
-                                    class="w-full h-full bg-[#E9E9E9] rounded-[20px] p-[35px] relative flex items-center justify-center">
+                                    class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
                                     <img data-aos="fade-up" data-aos-duration="900"
                                         data-aos-anchor-placement="top-bottom" data-aos-delay="100"
                                         src="./imgs/swiper logo3.png" alt="Swiper logo img 1"
@@ -889,15 +1104,16 @@
                                     <img data-aos="fade-up" data-aos-duration="900"
                                         data-aos-anchor-placement="top-bottom" data-aos-delay="100"
                                         src="./imgs/swiper img3.png" alt="Swiper img 1"
-                                        class="w-[433px] h-[346px] object-cover object-center">
+                                        class="md:w-full h-[198px] max-w-[433px] object-cover object-center">
                                 </div>
                                 <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" class="w-[110px] h-[40px] absolute bottom-[35px] left-[35px]">
+                                    data-aos-delay="100"
+                                    class="w-[80px] md:w-[110px] h-[40px] absolute bottom-[20px] md:bottom-[35px] md:left-[35px] left-0">
                                     <div
-                                        class="swiper-button-next w-[40px] h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
+                                        class="swiper-button-next w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
                                     </div>
                                     <div
-                                        class="swiper-button-prev w-[40px] h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
+                                        class="swiper-button-prev w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
                                     </div>
                                 </div>
                             </div>
@@ -906,13 +1122,14 @@
                 </div>
             </div>
             <!--  -->
-            <div class="max-w-[791px] w-full mx-auto mt-20">
+            <div class="max-w-[791px] w-full mx-auto mt-10 md:mt-20">
                 <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                    data-aos-delay="100" class="font-semibold text-[#121212] text-[48px] text-center leading-[52px]">
+                    data-aos-delay="100"
+                    class="font-semibold text-[#121212] text-[28px] md:text-[48px] md:text-center leading-[30px] md:leading-[52px]">
                     Bring Your Own Hardware
                 </h2>
-                <div class="mt-[40px] grid grid-cols-5 justify-center">
-                    <div class="flex flex-col gap-[70px]">
+                <div class="mt-5 md:mt-10 grid grid-cols-5 justify-center">
+                    <div class="flex flex-col gap-7 md:gap-[70px]">
                         <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" src="./imgs/alaha.png" alt="Alaha logo">
                         <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -920,9 +1137,9 @@
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="border border-solid border-[#121212] opacity-30 w-[131px] h-[1px] !rotate-90 my-auto">
+                        class="border border-solid border-[#121212] opacity-30 w-[50px] md:w-[131px] h-[1px] !rotate-90 my-auto">
                     </div>
-                    <div class="flex flex-col gap-[70px]">
+                    <div class="flex flex-col gap-7 md:gap-[70px]">
                         <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" src="./imgs/Verifone.png" alt="Verifone logo">
                         <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -930,9 +1147,9 @@
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="border border-solid border-[#121212] opacity-30 w-[131px] h-[1px] !rotate-90 my-auto">
+                        class="border border-solid border-[#121212] opacity-30 w-[50px] md:w-[131px] h-[1px] !rotate-90 my-auto">
                     </div>
-                    <div class="flex flex-col gap-[70px]">
+                    <div class="flex flex-col gap-7 md:gap-[70px]">
                         <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" src="./imgs/micros.png" alt="Micros logo">
                         <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -941,66 +1158,68 @@
                 </div>
             </div>
             <!--  -->
-            <div class="max-w-[1200px] w-full mx-auto pt-20">
+            <div class="max-w-[1200px] w-full mx-auto pt-10 md:pt-20">
                 <div class="max-w-[762px] w-full mx-auto">
                     <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="font-semibold text-[48px] text-[#121212] text-center leading-[52px]">
+                        class="font-semibold text-[32px] md:text-[48px] text-[#121212] md:text-center leading-[35px] md:leading-[52px]">
                         Integrated Software Partners
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="font-medium text-[#121212] text-[22px] text-center leading-[33px] mt-[30px]">
+                        class="font-medium text-[#121212] text-[14px] md:text-[22px] md:text-center leading-[16px] md:leading-[33px] mt-5 md:mt-[30px]">
                         We partnered with some of the industry's best point of sale software providers to provide our
                         ISO with tools to serve their merchants better.
                     </p>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="text-center mt-[20px]">
+                        data-aos-delay="100" class="md:text-center mt-[20px]">
                         <a href="#"
-                            class="inline-block px-[25px] py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[14px] leading-[19px]">
+                            class="inline-block px-[25px] py-[9px] md:py-[11px] hover:border-blue-500 border-black border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-black font-medium text-white text-[13px] md:text-[14px] leading-[19px]">
                             Get Started
                             <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                         </a>
                     </div>
                 </div>
-                <div class="w-full mt-10 flex gap-[22px] pb-8">
+                <div class="w-full mt-10 flex flex-col md:flex-row gap-3 md:gap-[22px] pb-4 md:pb-8">
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="bg-white max-w-[385px] w-full rounded-[22px] p-3">
+                        data-aos-delay="100" class="bg-white max-w-[385px] w-full rounded-[22px] md:p-3 py-3 px-[10px]">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             style="background: linear-gradient(78.14deg, #F9F9F9 0%, #E8E8E8 100%);"
                             class="max-w-[361px] h-[270px] w-full rounded-[12px] flex items-center justify-center">
                             <img src="./imgs/onTheFly.png" alt="on The fly logo" class="object-cover object-center">
                         </div>
-                        <div class="mt-[17px]">
+                        <div class="mt-[17px] mx-[16px]">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="font-semibold text-[#121212] text-[24px] leading-9">
+                                data-aos-delay="100"
+                                class="font-semibold text-[#121212] text-[20px] md:text-[24px] leading-9">
                                 On The Fly POS
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="font-medium text-[18px] text-[#121212] leading-[21px] opacity-80 mt-[5px]">
+                                class="font-medium text-[14px] md:text-[18px] text-[#121212] leading-[21px] opacity-80 md:mt-[5px]">
                                 The flexibility to combine different Android devices to create the perfect solution for
                                 your merchants.
                             </p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="bg-white max-w-[385px] w-full rounded-[22px] p-3">
+                        data-aos-delay="100" class="bg-white max-w-[385px] w-full rounded-[22px] md:p-3 py-3 px-[10px]">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             style="background: linear-gradient(78.14deg, #F9F9F9 0%, #E8E8E8 100%);"
                             class="max-w-[361px] h-[270px] w-full rounded-[12px] flex items-center justify-center">
                             <img src="./imgs/ehopper.png" alt="ehopper logo" class="object-cover object-center">
                         </div>
-                        <div class="mt-[17px]">
+                        <div class="mt-[17px] mx-[16px]">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="font-semibold text-[#121212] text-[24px] leading-9">
+                                data-aos-delay="100"
+                                class="font-semibold text-[#121212] text-[20px] md:text-[24px] leading-9">
                                 eHopper
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="font-medium text-[18px] text-[#121212] leading-[21px] opacity-80 mt-[5px]">
+                                class="font-medium text-[14px] md:text-[18px] text-[#121212] leading-[21px] opacity-80 md:mt-[5px]">
                                 An All-in-One cloud-based POS
                                 for any business type available
                                 on multiple devices and platforms.
@@ -1008,23 +1227,161 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                        data-aos-delay="100" class="bg-white max-w-[385px] w-full rounded-[22px] p-3">
+                        data-aos-delay="100" class="bg-white max-w-[385px] w-full rounded-[22px] md:p-3 py-3 px-[10px]">
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             style="background: linear-gradient(78.14deg, #F9F9F9 0%, #E8E8E8 100%);"
                             class="max-w-[361px] h-[270px] w-full rounded-[12px] flex items-center justify-center">
                             <img src="./imgs/franpos.png" alt="franpos logo" class="object-cover object-center">
                         </div>
-                        <div class="mt-[17px]">
+                        <div class="mt-[17px] mx-[16px]">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="font-semibold text-[#121212] text-[24px] leading-9">
+                                data-aos-delay="100"
+                                class="font-semibold text-[#121212] text-[20px] md:text-[24px] leading-9">
                                 FranPOS
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
-                                class="font-medium text-[18px] text-[#121212] leading-[21px] opacity-80 mt-[5px]">
+                                class="font-medium text-[14px] md:text-[18px] text-[#121212] leading-[21px] opacity-80 md:mt-[5px]">
                                 A retail franchise POS built to allow merchants to manage all aspects
                                 of their business from one system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="bg-[#121212] py-10 px-8">
+            <!--  -->
+            <div class="max-w-[961px] w-full mx-auto pt-10 md:py-20">
+                <div class="max-w-[680px] w-full mx-auto">
+                    <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100"
+                        class="font-semibold text-[32px] md:text-[48px] text-white md:text-center leading-[35px] md:leading-[52px]">
+                        All Payment Types
+                    </h2>
+                    <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100"
+                        class="font-medium text-[14px] md:text-[20px] text-white md:text-center leading-[19px] md:leading-[30px] mt-5 md:mt-[30px]">
+                        Our partners are not limited to only in-person payments. We have robust solutions for Online
+                        Payments with Hosted Payment Pages
+                        or APIs and a complete Omnichannel payment experience.
+                    </p>
+                </div>
+                <div class="w-full">
+                    <img src="./imgs/All Payment.png" alt="All Patment img"
+                        class="hidden md:block w-full object-cover object-center">
+                    <img src="./imgs/All Payment 2.png" alt="All Patment img"
+                        class="block md:hidden  w-full object-cover object-center">
+                </div>
+            </div>
+            <!--  -->
+            <div class="max-w-[1200px] mx-auto mt-10 md:mt-20 pb-20">
+                <div class="max-w-[701px] mx-auto py-15">
+                    <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100"
+                        class="font-semibold text-white text-[32px] md:text-[48px] md:text-center leading-[35px] md:leading-[53px]">
+                        Recruit Top Talent with The Industry Professional Card
+                    </h2>
+                    <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100"
+                        class="font-medium text-white text-[14px] md:text-[20px] md:text-center leading-[19px] md:leading-[30px] mt-5 md:mt-[30px] md:mx-[115px]">
+                        Attract better talent by offering your employees the Netevia Industry Professional card.
+                    </p>
+                    <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100" class="md:text-center mt-[20px]">
+                        <a href="#"
+                            class="inline-block px-[25px] md:py-[11px] py-[9px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] bg-white font-medium text-[#121212] text-[13px] md:text-[14px] leading-[19px]">
+                            Get Started
+                            <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="max-w-[960px] w-full mt-10 md:mt-[60px] mx-auto md:pb-[60px] grid md:grid-cols-2 gap-7">
+                    <div
+                        class="max-w-[465px] w-full p-[30px] rounded-[12px] bg-[#1E1E1E] border border-solid border-[#FFFFFF1F]">
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="w-full flex items-center justify-between">
+                            <img src="./imgs/Early Wage.png" alt="Early Wage" class="object-cover object-center">
+                            <button
+                                class="py-[9px] px-[16px] md:py-[11px] md:px-[25px]  flex items-center justify-center bg-[#FFFFFF1F] rounded-[55px] font-medium text-[9px] md:text-[14px] text-white leading-[19px]">
+                                Coming soon
+                            </button>
+                        </div>
+                        <div class="w-full mt-[30px]">
+                            <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
+                                class="font-semibold text-white text-[16px] md:text-[24px] leading-[17px] md:leading-[26px]">
+                                Early Wage Access
+                            </h3>
+                            <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
+                                class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
+                                Give your employees faster access to a part of their paycheck without disrupting your
+                                regular payroll.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-[465px] w-full p-[30px] rounded-[12px] bg-[#1E1E1E] border border-solid border-[#FFFFFF1F]">
+                        <div class="w-full">
+                            <img src="./imgs/VIP.png" alt="VIP" class="object-cover object-center">
+                        </div>
+                        <div class="w-full mt-[30px]">
+                            <h3
+                                class="font-semibold text-white text-[16px] md:text-[24px] leading-[17px] md:leading-[26px]">
+                                Exclusive Events
+                            </h3>
+                            <p
+                                class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
+                                Access to exclusive events and premium
+                                experiences with our card program.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-[465px] w-full p-[30px] rounded-[12px] bg-[#1E1E1E] border border-solid border-[#FFFFFF1F]">
+                        <div class="w-full flex items-center justify-between">
+                            <img src="./imgs/High-Yield.png" alt="High-Yield Savings Account"
+                                class="object-cover object-center">
+                            <button
+                                class="py-[9px] px-[16px] md:py-[11px] md:px-[25px]  flex items-center justify-center bg-[#FFFFFF1F] rounded-[55px] font-medium text-[9px] md:text-[14px] text-white leading-[19px]">
+                                Coming soon
+                            </button>
+                        </div>
+                        <div class="w-full mt-[30px]">
+                            <h3
+                                class="font-semibold text-white text-[16px] md:text-[24px] leading-[17px] md:leading-[26px]">
+                                High-Yield Savings Account
+                            </h3>
+                            <p
+                                class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
+                                Let your employees set money aside from their paychecks in our High-Yield Savings
+                                Accounts.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-[465px] w-full p-[30px] rounded-[12px] bg-[#1E1E1E] border border-solid border-[#FFFFFF1F]">
+                        <div class="w-full flex items-center justify-between">
+                            <img src="./imgs/Tax.png" alt="Early Access to Tax Refund"
+                                class="object-cover object-center">
+                            <button
+                                class="py-[9px] px-[16px] md:py-[11px] md:px-[25px]  flex items-center justify-center bg-[#FFFFFF1F] rounded-[55px] font-medium text-[9px] md:text-[14px] text-white leading-[19px]">
+                                Coming soon
+                            </button>
+                        </div>
+                        <div class="w-full mt-[30px]">
+                            <h3
+                                class="font-semibold text-white text-[16px] md:text-[24px] leading-[17px] md:leading-[26px]">
+                                Early Access to Tax Refund
+                            </h3>
+                            <p
+                                class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
+                                Early Access to Tax Refund offers employees
+                                an interest-free advance on their expected
+                                tax returns at no extra cost to you.
                             </p>
                         </div>
                     </div>
@@ -1034,28 +1391,29 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="max-w-[1440px] w-full mx-auto bg-[#121212] pb-10">
+    <footer class="w-full bg-[#121212] pb-[10px] md:pb-10 px-8">
         <div class="max-w-[1184px] w-full mx-auto">
             <div class="w-full">
                 <img src="./imgs/footer img.png" alt="Footer img" class="w-full object-cover object-center">
             </div>
-            <div class="w-full bg-inherit -translate-y-[100px] relative z-10">
+            <div class="w-full bg-inherit -translate-y-[45px] md:-translate-y-[100px] relative z-10">
                 <div class="max-w-[1040px] w-full mx-auto">
                     <div class="max-w-[475px] w-full flex items-center justify-between">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                            data-aos-delay="100" class="font-bold text-[34px] text-white leading-[37px]">
+                            data-aos-delay="100"
+                            class="font-bold text-[20px] md:text-[34px] text-white md:leading-[37px]">
                             Ready <br> to get started?
                         </h3>
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100">
                             <a href="#"
-                                class="bg-white inline-block py-[11px] px-[25px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] text-[#121212] font-medium text-[14px] leading-[19px]">
+                                class="bg-white inline-block py-[9px] md:py-[11px] px-[10px] md:px-[25px] hover:border-blue-500 border-white border-[0.8px] transition-all duration-500 ease-in-out rounded-[55px] text-[#121212] font-medium text-[13px] md:text-[14px] leading-[19px]">
                                 Get Started
                                 <i class='bx bx-up-arrow-alt origin-center rotate-45'></i>
                             </a>
                         </div>
                     </div>
-                    <div class="w-full pt-20 flex flex-wrap justify-between items-start">
+                    <div class="w-full pt-10 md:pt-20 flex flex-wrap justify-between gap-y-[80px] items-start">
                         <!--  -->
                         <ul class="flex flex-col gap-[7px]">
                             <li>
@@ -1290,10 +1648,11 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-[1184px] w-full mx-auto mt-[120px]">
+        <div class="max-w-[1184px] w-full mx-auto mt-10 md:mt-[120px]">
             <div class="max-w-[1184px] w-full h-[0.75px] mx-auto border border-solid border-white opacity-[12%]"></div>
-            <div class="max-w-[1040px] w-full mt-[25px] mx-auto">
-                <div>
+            <div
+                class="max-w-[1040px] w-full mt-[25px] mx-auto flex flex-row md:flex-col justify-between items-center md:items-start">
+                <div class="hidden md:block">
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100" class="flex font-bold text-[12px] text-white gap-[7px] items-center">
                         <i class='bx bx-map'></i>
@@ -1305,8 +1664,8 @@
                         data-aos-delay="100" src="./imgs/Footer Logo.png" alt="Footer logo"
                         class="object-cover object-center w-full h-full">
                 </div>
-                <div class="mt-6 flex items-end justify-between">
-                    <div class="w-[176px]">
+                <div class="w-full mt-6 flex items-end justify-between gap-[10px]">
+                    <div class="hidden md:block w-[176px]">
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" class="font-normal text-[16px] text-white ">
                             Address
@@ -1318,7 +1677,7 @@
                             North Miami Beach, FL 33160
                         </p>
                     </div>
-                    <div class="w-[155px]">
+                    <div class="hidden md:block w-[155px]">
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" class="font-normal text-[16px] text-white">
                             Contact information
@@ -1338,7 +1697,7 @@
                             </span>
                         </p>
                     </div>
-                    <div class="w-[318px]">
+                    <div class="hidden md:block w-[318px]">
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" class="font-normal text-[12px] text-white">
                             <br>
