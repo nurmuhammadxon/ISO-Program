@@ -26,76 +26,573 @@
 <body style="font-family: 'Noto Sans', sans-serif;">
 
     <!-- Header Section -->
-    <header class="w-full h-20 bg-[#121212]">
+    <header class="py-5 md:pt-10 md:pb-10 bg-[#121212]">
         <!-- Navbar section -->
-        <nav class="container mx-auto flex items-center justify-between h-full">
+        <nav class="max-w-[1236px]  mx-auto px-5 flex items-center justify-between md:justify-start">
             <!-- Menu box -->
-            <div class="text-white text-3xl cursor-pointer md:hidden" id="menu-icon">
+            <button class="text-white text-[42px] cursor-pointer md:hidden" id="menu-icon">
                 <i class="bx bx-menu"></i>
-            </div>
+            </button>
             <!-- Logo -->
-            <a href="./index.html" class="inline-block w-32 h-6">
-                <img class="object-cover object-center" src="./imgs/logo.png" alt="Logo brend">
+            <a href="./index.html" class="flex mr-12 lg:mr-12 md:mr-[5px]">
+                <svg width="126" height="25" viewBox="0 0 126 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.2239 21.8741V0H35.8119V3.03136H24.9738V9.30937H29.2358C29.6446 9.30953 30.0475 9.40807 30.4103 9.59668C30.7731 9.78529 31.0852 10.0584 31.3202 10.393L32.6424 12.284H24.9738V18.8471H35.8119V21.877L21.2239 21.8741Z"
+                        fill="white" />
+                    <path
+                        d="M58.728 21.8741V0H73.3146V3.03136H62.478V9.30937H66.7341C67.143 9.30953 67.5458 9.40807 67.9086 9.59668C68.2714 9.78529 68.5835 10.0584 68.8185 10.393L70.1407 12.284H62.478V18.8471H73.3146V21.877L58.728 21.8741Z"
+                        fill="white" />
+                    <path d="M45.3763 21.8741V3.03136H38.9397V0H55.5671V3.03136H49.1262V21.8741H45.3763Z"
+                        fill="white" />
+                    <path
+                        d="M113.309 1.5722e-05H117.527C117.746 -8.36035e-05 117.959 0.0687329 118.136 0.196686C118.314 0.324639 118.446 0.505219 118.515 0.712764L125.559 21.8741H121.616L115.966 4.16596H114.925L109.21 21.8741H105.24L112.315 0.711309C112.385 0.50321 112.518 0.322396 112.697 0.194665C112.875 0.0669332 113.089 -0.00118956 113.309 1.5722e-05Z"
+                        fill="white" />
+                    <path
+                        d="M83.4897 21.1628L76.4219 0H80.39L86.108 17.7082H87.1495L92.7991 0H96.7367L89.6892 21.1614C89.6204 21.3689 89.4879 21.5495 89.3106 21.6774C89.1333 21.8054 88.9202 21.8742 88.7015 21.8741H84.4832C84.2639 21.8749 84.0499 21.8066 83.8716 21.6789C83.6933 21.5512 83.5597 21.3707 83.4897 21.1628Z"
+                        fill="white" />
+                    <path d="M99.2935 21.8741V0H102.432V21.8741H99.2935Z" fill="white" />
+                    <path
+                        d="M14.2811 6.36392e-06V16.5445C14.2811 16.5908 14.2628 16.6352 14.23 16.6679C14.1973 16.7007 14.1529 16.719 14.1066 16.719C14.0769 16.7176 14.0479 16.7088 14.0225 16.6933C13.9971 16.6778 13.976 16.6561 13.9611 16.6303L4.83214 0.520749C4.74061 0.361911 4.60872 0.23009 4.44983 0.138641C4.29095 0.0471919 4.11071 -0.000634862 3.92739 6.36392e-06H0V19.7911H9.72247L8.39443 17.7998C8.16194 17.4512 7.84699 17.1654 7.47754 16.9677C7.10809 16.7701 6.69556 16.6667 6.27655 16.6667H3.74993V5.30489C3.74993 5.28942 3.75298 5.2741 3.7589 5.2598C3.76482 5.24551 3.7735 5.23252 3.78444 5.22158C3.79538 5.21064 3.80837 5.20196 3.82266 5.19604C3.83696 5.19012 3.85228 5.18707 3.86775 5.18707C3.88841 5.18747 3.90862 5.19316 3.92644 5.2036C3.94427 5.21404 3.95912 5.22888 3.96957 5.24671L13.1989 21.3548C13.2905 21.5129 13.4221 21.644 13.5803 21.7352C13.7386 21.8263 13.9181 21.8742 14.1008 21.8741H18.0282V6.36392e-06H14.2811Z"
+                        fill="white" />
+                    <path
+                        d="M11.802 24.9999H3.46142C2.98456 24.9999 2.51728 24.866 2.11278 24.6135C1.70827 24.361 1.38278 23.9999 1.17335 23.5715L0.344238 21.874H8.68485C9.16171 21.8741 9.62899 22.0079 10.0335 22.2605C10.438 22.513 10.7635 22.874 10.9729 23.3024L11.802 24.9999Z"
+                        fill="white" />
+                    <path
+                        d="M119.564 24.9999H111.231L112.3 22.5053C112.381 22.3181 112.514 22.1585 112.684 22.0463C112.854 21.9342 113.053 21.8742 113.257 21.874H117.583C117.79 21.8741 117.992 21.9357 118.164 22.051C118.335 22.1663 118.469 22.33 118.548 22.5213L119.564 24.9999Z"
+                        fill="white" />
+                </svg>
             </a>
             <!-- Navigation list -->
-            <ul class="hidden md:flex items-center gap-6 lg:ml-14">
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Products</a>
+            <ul class="mr-auto items-center lg:gap-7 md:gap-3 hidden md:flex">
+                <li class="relative">
+                    <a href="#" class="text-white text-sm font-normal leading-5 hover:text-blue-500">Home</a>
                 </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Business Types</a>
+                <li class="relative">
+                    <button id="destopMenuNavbar"
+                        class="text-white text-sm font-normal leading-5 hover:text-blue-500">Industries</button>
+                    <ul id="destopMenuNavbarBar"
+                        class="absolute w-[270px] px-5 -left-5 top-[70px] z-20 border-t-[1.3px] border-white bg-[#1E1E1E] p-5 hidden">
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Restaurants
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Retail
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Bakery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Fish Market
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Meat Market
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Grocery Store
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Non-Profits
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Enterprise
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Agents
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                ISVs
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Who Are We?</a>
+                <li class="relative">
+                    <button id="destopMenuNavbar"
+                        class="text-white text-sm font-normal leading-5 hover:text-blue-500">Products</button>
+                    <ul id="destopMenuNavbarBar"
+                        class="absolute w-[270px] px-5 -left-5 top-[70px] z-20 border-t-[1.3px] border-white bg-[#1E1E1E] p-5 hidden">
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Business banking services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Personal banking services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                ISO in a box
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                ISO banking services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Online payments
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                In-Person payments
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Embedded finance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Embedded banking services
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Contact Us</a>
+                <li class="relative">
+                    <button id="destopMenuNavbar"
+                        class="text-white text-sm font-normal leading-5 hover:text-blue-500">Developers</button>
+                    <ul id="destopMenuNavbarBar"
+                        class="absolute w-[270px] px-5 -left-5 top-[70px] z-20 border-t-[1.3px] border-white bg-[#1E1E1E] p-5 hidden">
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Restaurants
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Retail
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Bakery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Fish Market
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Meat Market
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Grocery Store
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Non-Profits
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Enterprise
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Agents
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                ISVs
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Pricing</a>
+                <li class="relative">
+                    <button id="destopMenuNavbar"
+                        class="text-white text-sm font-normal leading-5 hover:text-blue-500">Resources</button>
+                    <ul id="destopMenuNavbarBar"
+                        class="absolute w-[270px] px-5 -left-5 top-[70px] z-20 border-t-[1.3px] border-white bg-[#1E1E1E] p-5 hidden">
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Request API Access
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Merchant Services API
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Banking services API
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Semi-integrated PIN Pad API
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Payment Gateway API
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="relative">
+                    <button id="destopMenuNavbar"
+                        class="text-white text-sm font-normal leading-5 hover:text-blue-500">Resources</button>
+                    <ul id="destopMenuNavbarBar"
+                        class="absolute w-[270px] px-5 -left-5 top-[70px] z-20 border-t-[1.3px] border-white bg-[#1E1E1E] p-5 hidden">
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                News
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Community
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Annual conference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Becoma a partner
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="relative">
+                    <button id="destopMenuNavbar"
+                        class="text-white text-sm font-normal leading-5 hover:text-blue-500">Login</button>
+                    <ul id="destopMenuNavbarBar"
+                        class="absolute w-[270px] px-5 -left-5 top-[70px] z-20 border-t-[1.3px] border-white bg-[#1E1E1E] p-5 hidden">
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Personal banking services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                Business banking services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" class="text-white text-sm capitalize">
+                                HQ
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <!-- Account buttons -->
-            <div class="hidden md:flex ml-auto items-center md:gap-3 gap-[2px]">
-                <button
-                    class="lg:w-32 lg:h-10 p-1 border border-white rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:border-blue-500 transition duration-500">
-                    Sign in
-                </button>
-                <button
-                    class="lg:w-32 lg:h-10 p-1 bg-[#187AC9] rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:bg-blue-500 transition duration-500">
+            <div class="hidden md:flex items-center gap-24">
+                <a href="#"
+                    class="py-[11px] px-[25px] bg-[#187AC9] rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:bg-blue-500 transition duration-500">
                     Get Started
-                </button>
+                </a>
             </div>
         </nav>
         <!-- Mobile menu -->
-        <div class="md:hidden hidden w-[95%]  flex-col items-start bg-[#121212] relative z-10 text-white px-6 py-4 delay-2000 transition-all ease-in-out"
-            id="mobile-menu">
-            <ul class="space-y-4">
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Products</a>
-                </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Business Types</a>
-                </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Who Are We?</a>
-                </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Contact Us</a>
-                </li>
-                <li>
-                    <a class="text-white text-sm font-normal leading-5 hover:text-blue-500" href="#">Pricing</a>
-                </li>
-            </ul>
-            <div class="mt-4 flex flex-col gap-3">
-                <button
-                    class="w-full h-10 border border-white rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:border-blue-500 transition duration-500">
-                    Sign in
-                </button>
-                <button
-                    class="w-full h-10 bg-[#187AC9] rounded-full text-sm font-normal leading-5 text-[#EAEAEA] hover:bg-blue-500 transition duration-500">
-                    Get Started
-                </button>
+        <div id="mobile-menu" class="bg-[rgba(18,18,18,0.22)] z-[28] fixed w-full h-screen hidden">
+            <div id="mobile-menuBar" style="height: calc(100vh - 82px);"
+                class="fixed bg-[#121212] md:hidden top-[102px] transition-all z-[1000] w-[80%] overflow-auto pb-11 -left-[100%]">
+                <ul class="border border-white/15">
+                    <li class="border-b border-white/15 ">
+                        <a href="#" target="_self"
+                            class="capitalize text-sm font-normal leading-normal px-8 py-5 block text-white">Home</a>
+                    </li>
+                    <li id="drapMenuHeader" class="border-b cursor-pointer transition-all border-white/15 py-5">
+                        <div class="capitalize text-sm font-normal leading-normal px-8 text-white flex justify-between items-center select-none"
+                            onclick="toggleMenu()">
+                            Industries
+                            <i id="chevron-right" class='bx bx-chevron-right'></i>
+                            <i id="chevron-down" class='bx bx-chevron-down hidden'></i>
+                        </div>
+                        <div id="drapMenuHeaderin" class="overflow-hidden h-0 transition-all duration-300 ease-in-out">
+                            <div class="mx-[32px] pt-5">
+                                <ul class="flex flex-col gap-4 border-t pt-5">
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Restaurants
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Retail
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Bakery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Fish Market
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Meat Market
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Grocery Store
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Non-Profits
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Enterprise
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Agents
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            ISVs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="drapMenuHeader" class="border-b cursor-pointer transition-all border-white/15 py-5">
+                        <div class="capitalize text-sm font-normal leading-normal px-8 text-white flex justify-between items-center select-none"
+                            onclick="toggleMenu()">
+                            Products
+                            <i id="chevron-right" class='bx bx-chevron-right'></i>
+                            <i id="chevron-down" class='bx bx-chevron-down hidden'></i>
+                        </div>
+                        <div id="drapMenuHeaderin" class="overflow-hidden h-0 transition-all duration-300 ease-in-out">
+                            <div class="mx-[32px] pt-5">
+                                <ul id="destopMenuNavbarBar" class="flex flex-col gap-4 border-t pt-5">
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Business banking services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Personal banking services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            ISO in a box
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            ISO banking services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Online payments
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            In-Person payments
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Embedded finance
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Embedded banking services
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="drapMenuHeader" class="border-b cursor-pointer transition-all border-white/15 py-5">
+                        <div class="capitalize text-sm font-normal leading-normal px-8 text-white flex justify-between items-center select-none"
+                            onclick="toggleMenu()">
+                            Developers
+                            <i id="chevron-right" class='bx bx-chevron-right'></i>
+                            <i id="chevron-down" class='bx bx-chevron-down hidden'></i>
+                        </div>
+                        <div id="drapMenuHeaderin" class="overflow-hidden h-0 transition-all duration-300 ease-in-out">
+                            <div class="mx-[32px] pt-5">
+                                <ul id="destopMenuNavbarBar" class="flex flex-col gap-4 border-t pt-5">
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Restaurants
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Retail
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Bakery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Fish Market
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Meat Market
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Grocery Store
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Non-Profits
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Enterprise
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Agents
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            ISVs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="drapMenuHeader" class="border-b cursor-pointer transition-all border-white/15 py-5">
+                        <div class="capitalize text-sm font-normal leading-normal px-8 text-white flex justify-between items-center select-none"
+                            onclick="toggleMenu()">
+                            Resources
+                            <i id="chevron-right" class='bx bx-chevron-right'></i>
+                            <i id="chevron-down" class='bx bx-chevron-down hidden'></i>
+                        </div>
+                        <div id="drapMenuHeaderin" class="overflow-hidden h-0 transition-all duration-300 ease-in-out">
+                            <div class="mx-[32px] pt-5">
+                                <ul id="destopMenuNavbarBar" class="flex flex-col gap-4 border-t pt-5">
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Support
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            News
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Community
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Annual conference
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Becoma a partner
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="drapMenuHeader" class="border-b cursor-pointer transition-all border-white/15 py-5">
+                        <div class="capitalize text-sm font-normal leading-normal px-8 text-white flex justify-between items-center select-none"
+                            onclick="toggleMenu()">
+                            Login
+                            <i id="chevron-right" class='bx bx-chevron-right'></i>
+                            <i id="chevron-down" class='bx bx-chevron-down hidden'></i>
+                        </div>
+                        <div id="drapMenuHeaderin" class="overflow-hidden h-0 transition-all duration-300 ease-in-out">
+                            <div class="mx-[32px] pt-5">
+                                <ul id="destopMenuNavbarBar" class="flex flex-col gap-4 border-t pt-5">
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Personal banking services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            Business banking services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_self" class="text-white text-sm capitalize">
+                                            HQ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -103,7 +600,7 @@
     <!-- Main Section -->
     <main class="w-full">
         <!-- Hero section -->
-        <section class="relative pt-[150px] md:pt-[120px] h-[610px] md:h-auto">
+        <section class="relative">
             <!-- Video background -->
             <div class="absolute left-0 top-0 -z-10 w-full h-full">
                 <video autoplay muted loop class="object-cover w-full h-full">
@@ -111,7 +608,7 @@
                 </video>
             </div>
             <!-- Main content -->
-            <div class="w-[90%] md:w-[753px] mx-auto text-center">
+            <div class="w-[90%] md:w-[753px] mx-auto md:text-center md:pt-36 pt-7 md:pb-48 pb-72 ">
                 <h1 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                     data-aos-delay="100"
                     class="text-white text-[32px] md:text-[60px] leading-[40px] md:leading-[66px] font-semibold">
@@ -134,42 +631,32 @@
                 </div>
             </div>
             <!-- Logos section -->
-            <div class="flex items-center absolute bottom-0 left-0 w-full h-[80px] bg-[#1E1E1E] md:static md:mt-8">
-                <ul class="flex items-center justify-between max-w-[90%] md:max-w-[924px] w-full mx-auto">
-                    <li class="w-1/5 md:w-auto">
-                        <a href="#">
-                            <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center mx-auto" src="./imgs/TSYS.png"
-                                alt="TSYS card">
-                        </a>
+            <div class="bg-[#1E1E1E] py-5">
+                <ul class="flex justify-between items-center px-5 max-w-[1000px] mx-auto gap-[5px]">
+                    <li>
+                        <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="object-cover object-center mx-auto h-6 md:h-9"
+                            src="./imgs/TSYS.png" alt="TSYS card">
                     </li>
-                    <li class="w-1/5 md:w-auto">
-                        <a href="#">
-                            <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center mx-auto"
-                                src="./imgs/Mastercard_2019_logo 1.png" alt="card">
-                        </a>
+                    <li>
+                        <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="object-cover object-center mx-auto h-6 md:h-9"
+                            src="./imgs/Fiserv_logo.png" alt="Fiserv card">
                     </li>
-                    <li class="w-1/5 md:w-auto">
-                        <a href="#">
-                            <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center mx-auto" src="./imgs/AMEX.png"
-                                alt="AMEX card">
-                        </a>
+                    <li>
+                        <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="object-cover object-center mx-auto h-6 md:h-9"
+                            src="./imgs/Mastercard_2019_logo 1.png" alt="card">
                     </li>
-                    <li class="w-1/5 md:w-auto">
-                        <a href="#">
-                            <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center mx-auto"
-                                src="./imgs/Fiserv_logo.png" alt="Fiserv card">
-                        </a>
+                    <li>
+                        <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="object-cover object-center mx-auto h-6 md:h-9"
+                            src="./imgs/Visa.png" alt="Visa card">
                     </li>
-                    <li class="w-1/5 md:w-auto">
-                        <a href="#">
-                            <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                data-aos-delay="100" class="object-cover object-center mx-auto" src="./imgs/Visa.png"
-                                alt="Visa card">
-                        </a>
+                    <li>
+                        <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="object-cover object-center mx-auto h-6 md:h-9"
+                            src="./imgs/AMEX.png" alt="AMEX card">
                     </li>
                 </ul>
             </div>
@@ -586,8 +1073,7 @@
                         </a>
                     </div>
                 </div>
-                <div
-                    class="grid md:grid-cols-2 gap-5 max-w-[990px] mx-auto justify-between w-full relative mt-10 md:mt-[60px] ">
+                <div class="grid md:grid-cols-2 gap-5 justify-between w-full relative mt-10 md:mt-[60px] ">
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
                         class="max-w-[333px] w-full flex items-start flex-row md:flex-col gap-[10px] bg-[#1E1E1E] p-4 rounded-[22px]">
@@ -678,9 +1164,9 @@
         <!--  -->
         <section class="bg-[#EFF0ED] py-10 md:py-20">
             <div
-                class="bg-white max-w-[1200px] w-full mx-auto rounded-[30px] py-10 md:py-[54px] px-8 md:px-[50px] flex md:flex-row flex-col justify-between">
-                <div>
-                    <div class="max-w-[478px] w-full">
+                class="bg-white max-w-[1200px] w-full mx-auto rounded-[30px] py-10 md:pt-[54px] px-8 md:px-[50px] flex md:flex-row flex-col justify-between">
+                <div class="max-w-[734px]">
+                    <div class="max-w-[478px] w-full mb-10 md:mb-[197px]">
                         <h2 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
                             class="font-semibold text-[32px] md:text-[48px] text-[#121212] leading-[35px] md:leading-[52px]">
@@ -706,7 +1192,7 @@
                             data-aos-delay="100" src="./imgs/Phone.png" alt="Iphone 13 Pro Netevia img"
                             class="w-full h-full object-cover object-center">
                     </div>
-                    <div class="hidden md:flex max-w-[724px] w-full lg:mt-[150px] mt-[80px] gap-5">
+                    <div class="md:grid grid-cols-3 gap-x-6 hidden">
                         <div class="max-w-[223px]">
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100" class="font-semibold text-[20px] text-[#121212] leading-[22px]">
@@ -839,7 +1325,7 @@
                             <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
                                 class="font-semibold text-white text-[22px] md:text-[24px] leading-[26px]">
-                                Repay from Residuals
+                                Repay <br> from Residuals
                             </h3>
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
@@ -897,15 +1383,15 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10">
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="md:max-w-[350px] w-full h-[160px] md:h-[284px] rounded-[20px] p-5 bg-white flex flex-col justify-between">
+                        class="p-5 md:p-[22px] bg-white rounded-[13px] md:rounded-[20px] flex flex-col justify-between">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-[#121212]">
+                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-[#121212] mb-9 md:mb-16">
                             Better Pricing
                         </h3>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-[#121212] !opacity-70">
+                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-[#121212] !opacity-70 mt-auto">
                             Offer your merchants
                             better pricing structures
                             and take advantage
@@ -914,15 +1400,15 @@
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="md:max-w-[350px] w-full h-[160px] md:h-[284px] rounded-[20px] p-5 bg-white flex flex-col justify-between">
+                        class="p-5 md:p-[22px] bg-white rounded-[13px] md:rounded-[20px] flex flex-col">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-[#121212]">
+                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-[#121212] mb-9 md:mb-16">
                             Become a Partner
                         </h3>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-[#121212] !opacity-70">
+                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-[#121212] !opacity-70 mt-auto">
                             Become a partner
                             with Netevia and get
                             access to the most robust
@@ -931,15 +1417,15 @@
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
-                        class="md:max-w-[350px] w-full h-[160px] md:h-[284px] rounded-[20px] p-5 bg-black lg:!-translate-y-[150px] flex flex-col justify-between">
+                        class="p-5 md:p-[22px] rounded-[13px] md:rounded-[20px] flex flex-col bg-black lg:!-translate-y-[150px]">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-white">
+                            class="font-semibold text-[22px] md:text-[32px] leading-[24px] md:leading-[38px] text-white mb-9 md:mb-16">
                             Win & Retain Merchants
                         </h3>
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100"
-                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-white !opacity-70">
+                            class="font-medium text-[14px] md:text-[22px] leading-[19px] md:leading-[26px] text-white !opacity-70 mt-auto">
                             Get access to clear yet
                             flexible underwriting criteria
                             and the appropriate level
@@ -976,7 +1462,10 @@
             <div class="max-w-[1200px] w-full mx-auto mt-10 md:mt-20 flex justify-between relative">
                 <div class="swiper mySwiper w-full h-full">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3">
+                        <!-- swiper slide -->
+                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3"
+                            style="width: 728px; margin-right: 30px;">
+                            <!-- Left content -->
                             <div class="max-w-[531px] w-full my-auto">
                                 <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
@@ -999,32 +1488,48 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="max-w-[585px] w-full relative">
-                                <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100"
-                                    class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
-                                    <img data-aos="fade-up" data-aos-duration="900"
-                                        data-aos-anchor-placement="top-bottom" data-aos-delay="100"
-                                        src="./imgs/swiper logo1.png" alt="Swiper logo img 1"
-                                        class="absolute top-[35px] left-[35px]">
-                                    <img data-aos="fade-up" data-aos-duration="900"
-                                        data-aos-anchor-placement="top-bottom" data-aos-delay="100"
-                                        src="./imgs/swiper img1.png" alt="Swiper img 1"
-                                        class="md:w-full h-[198px] max-w-[433px] object-cover object-center">
-                                </div>
-                                <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100"
-                                    class="w-[80px] md:w-[110px] h-[40px] absolute bottom-[20px] md:bottom-[35px] md:left-[35px] left-0">
-                                    <div
-                                        class="swiper-button-next w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
-                                    </div>
-                                    <div
-                                        class="swiper-button-prev w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
-                                    </div>
-                                </div>
+                            <!-- rigth content -->
+                            <div
+                                class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
+                                <!-- <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                    data-aos-delay="100" src="./imgs/swiper img1.png" alt="Swiper img 1"
+                                    class="w-full md:w-auto max-w-[247px] md:max-w-[433px]"> -->
+                                <video muted autoplay loop class="w-full md:w-auto max-w-[247px] md:max-w-[433px]"
+                                    src="https://netevia.com/wp-content/themes/netevia-dark/assets/other/iso-in-a-box/netevia.mp4"></video>
+                                <svg class="top-5 md:top-10 left-[18px] w-[66px] md:w-auto md:left-9 absolute"
+                                    width="127" height="25" viewBox="0 0 127 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21.9072 21.8741V0H36.4953V3.03136H25.6572V9.30937H29.9191C30.328 9.30953 30.7308 9.40807 31.0936 9.59668C31.4564 9.78529 31.7685 10.0584 32.0035 10.393L33.3257 12.284H25.6572V18.8471H36.4953V21.877L21.9072 21.8741Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M59.4121 21.8741V0H73.9987V3.03136H63.162V9.30937H67.4182C67.8271 9.30953 68.2299 9.40807 68.5927 9.59668C68.9555 9.78529 69.2676 10.0584 69.5026 10.393L70.8248 12.284H63.162V18.8471H73.9987V21.877L59.4121 21.8741Z"
+                                        fill="#121212" />
+                                    <path d="M46.0596 21.8741V3.03136H39.623V0H56.2504V3.03136H49.8095V21.8741H46.0596Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M113.992 1.5722e-05H118.211C118.429 -8.36035e-05 118.643 0.0687329 118.82 0.196686C118.997 0.324639 119.13 0.505219 119.198 0.712764L126.243 21.8741H122.3L116.65 4.16596H115.608L109.893 21.8741H105.924L112.999 0.711309C113.068 0.50321 113.202 0.322396 113.38 0.194665C113.559 0.0669332 113.773 -0.00118956 113.992 1.5722e-05Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M84.1733 21.1628L77.1055 0H81.0736L86.7916 17.7082H87.8331L93.4827 0H97.4203L90.3728 21.1614C90.304 21.3689 90.1715 21.5495 89.9942 21.6774C89.8169 21.8054 89.6038 21.8742 89.3851 21.8741H85.1668C84.9475 21.8749 84.7335 21.8066 84.5552 21.6789C84.3769 21.5512 84.2433 21.3707 84.1733 21.1628Z"
+                                        fill="#121212" />
+                                    <path d="M99.9775 21.8741V0H103.117V21.8741H99.9775Z" fill="#121212" />
+                                    <path
+                                        d="M14.9647 6.36392e-06V16.5445C14.9647 16.5908 14.9464 16.6352 14.9136 16.6679C14.8809 16.7007 14.8365 16.719 14.7902 16.719C14.7604 16.7176 14.7315 16.7088 14.7061 16.6933C14.6807 16.6778 14.6596 16.6561 14.6447 16.6303L5.51574 0.520749C5.4242 0.361911 5.29231 0.23009 5.13343 0.138641C4.97454 0.0471919 4.79431 -0.000634862 4.61098 6.36392e-06H0.683594V19.7911H10.4061L9.07802 17.7998C8.84553 17.4512 8.53059 17.1654 8.16114 16.9677C7.79168 16.7701 7.37915 16.6667 6.96014 16.6667H4.43352V5.30489C4.43352 5.28942 4.43657 5.2741 4.44249 5.2598C4.44841 5.24551 4.45709 5.23252 4.46803 5.22158C4.47897 5.21064 4.49196 5.20196 4.50626 5.19604C4.52055 5.19012 4.53587 5.18707 4.55134 5.18707C4.572 5.18747 4.59221 5.19316 4.61004 5.2036C4.62786 5.21404 4.64271 5.22888 4.65317 5.24671L13.8825 21.3548C13.9741 21.5129 14.1056 21.644 14.2639 21.7352C14.4222 21.8263 14.6017 21.8742 14.7844 21.8741H18.7118V6.36392e-06H14.9647Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M12.4851 25.0001H4.14453C3.66767 25 3.20039 24.8661 2.79588 24.6136C2.39138 24.3611 2.06589 24.0001 1.85646 23.5716L1.02734 21.8741H9.36795C9.84482 21.8742 10.3121 22.0081 10.7166 22.2606C11.1211 22.5131 11.4466 22.8741 11.656 23.3026L12.4851 25.0001Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M120.248 25.0001H111.915L112.984 22.5054C113.065 22.3182 113.198 22.1587 113.368 22.0465C113.538 21.9343 113.738 21.8744 113.941 21.8741H118.267C118.474 21.8743 118.676 21.9359 118.848 22.0511C119.02 22.1664 119.153 22.3301 119.232 22.5214L120.248 25.0001Z"
+                                        fill="#121212" />
+                                </svg>
                             </div>
                         </div>
-                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3">
+                        <!-- swiper slide -->
+                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3"
+                            style="width: 728px; margin-right: 30px;">
+                            <!-- Left content -->
                             <div class="max-w-[531px] w-full my-auto">
                                 <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
@@ -1047,31 +1552,39 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="max-w-[585px] w-full relative">
-                                <div
-                                    class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
-                                    <img data-aos="fade-up" data-aos-duration="900"
-                                        data-aos-anchor-placement="top-bottom" data-aos-delay="100"
-                                        src="./imgs/swiper logo2.png" alt="Swiper logo img 1"
-                                        class="absolute top-[35px] left-[35px]">
-                                    <img data-aos="fade-up" data-aos-duration="900"
-                                        data-aos-anchor-placement="top-bottom" data-aos-delay="100"
-                                        src="./imgs/swiper img2.png" alt="Swiper img 1"
-                                        class="md:w-full h-[198px] max-w-[433px] object-cover object-center">
-                                </div>
-                                <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100"
-                                    class="w-[80px] md:w-[110px] h-[40px] absolute bottom-[20px] md:bottom-[35px] md:left-[35px] left-0">
-                                    <div
-                                        class="swiper-button-next w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
-                                    </div>
-                                    <div
-                                        class="swiper-button-prev w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
-                                    </div>
-                                </div>
+                            <!-- rigth content -->
+                            <div
+                                class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
+                                <!-- <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                    data-aos-delay="100" src="./imgs/swiper img2.png" alt="Swiper img 1"
+                                    class="w-full md:w-auto max-w-[247px] md:max-w-[433px]"> -->
+                                <video muted autoplay loop class="w-full md:w-auto max-w-[247px] md:max-w-[433px]"
+                                    src="https://netevia.com/wp-content/themes/netevia-dark/assets/other/iso-in-a-box/pax.mp4"></video>
+                                <svg class="top-5 md:top-10 left-[18px] w-[66px] md:w-auto md:left-9 absolute"
+                                    width="126" height="55" viewBox="0 0 126 55" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.223 9.98357C31.0548 -1.92025 45.6118 -1.84696 51.2353 3.29629C50.7531 3.34066 50.2776 3.39273 49.8118 3.46314C49.5392 3.50171 49.2669 3.54415 48.995 3.59044C44.6879 -0.256628 33.5749 5.11229 19.7856 15.8829C5.40996 27.1155 0.682374 36.968 4.56223 41.8017C8.44209 46.6354 20.6931 43.6794 34.4804 31.9231C44.0282 23.7806 49.4212 15.8993 50.5428 10.2179C51.6562 9.78924 52.7967 9.43484 53.9569 9.15707C54.7439 16.5301 49.7867 27.9941 37.8222 37.3451C22.54 49.2894 8.52792 51.3784 2.61411 43.8115C-3.29971 36.2447 0.647655 22.4796 16.223 9.98357Z"
+                                        fill="#121212" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M28.2872 16.3246C43.9175 3.98006 59.1486 3.28086 63.8868 9.76657C68.625 16.2523 64.124 31.4303 49.2045 43.6428C35.4354 54.9139 22.112 57.1138 15.5462 51.4189L15.4498 51.3359C15.363 51.2588 15.2771 51.1816 15.1932 51.1016L15.1691 51.0784C15.0708 50.9852 14.9743 50.8888 14.8798 50.7891C15.0675 50.773 15.2546 50.7547 15.4411 50.7341L15.7709 50.6965L16.1326 50.6502L16.2965 50.6281H16.3293L16.4258 50.6136L16.4914 50.6039L16.5241 50.5991L16.5897 50.5895L16.6225 50.5847L16.6881 50.575L16.7209 50.5702L16.7537 50.5654L16.9167 50.5393L16.9494 50.5335L16.9822 50.5277C17.1432 50.6379 17.31 50.7393 17.4818 50.8315H17.4905C17.5721 50.8753 17.6551 50.9171 17.7393 50.9569L17.7663 50.9695C17.8441 51.0061 17.9232 51.0408 18.0036 51.0736L18.0499 51.0929C18.1244 51.1231 18.2 51.1521 18.2765 51.1797L18.3421 51.2028C18.4141 51.2273 18.4867 51.2507 18.56 51.2733L18.6382 51.2964C24.3417 52.9571 34.633 47.4889 45.7567 38.0993C61.9589 24.4171 66.2255 12.6502 60.4978 9.44736C56.0432 6.95626 45.5493 10.8593 31.5392 21.7852C21.3086 29.7648 15.3447 37.5785 14.4371 43.4528C13.53 43.6799 12.608 43.843 11.6779 43.9408C10.7367 36.2486 16.1316 25.9167 28.2804 16.3198"
+                                        fill="#121212" />
+                                    <path
+                                        d="M75.2875 49.8112C76.2191 49.6257 77.1188 49.3064 77.9589 48.8632C79.5921 48.0546 80.9895 46.839 82.0163 45.3334C82.307 44.7357 82.4487 44.0765 82.4294 43.4122C82.4101 42.7478 82.2303 42.098 81.9054 41.5182C80.8897 40.39 79.4737 39.7027 77.9589 39.6028C77.794 39.5855 77.6976 39.5826 77.6976 39.5826L75.2865 39.6038L62.8696 39.7128L57.0166 54.8001L63.2149 54.8455L65.3164 49.979L74.163 49.9241C74.5401 49.92 74.9161 49.8826 75.2865 49.8122M65.9471 47.4686L67.9724 42.3669C67.9724 42.3669 74.325 42.4151 75.0956 42.4151C75.1631 42.4151 75.2277 42.4151 75.2885 42.4151C77.9888 42.4894 77.1315 45.2215 76.1565 46.0712C75.8859 46.3053 75.5955 46.5153 75.2885 46.699C74.6409 47.1047 73.9144 47.3678 73.1571 47.4706L65.9471 47.4686Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M90.4204 39.6713L89.1262 40.8286L77.9601 50.7891L75.2887 53.1722L73.4785 54.7876H79.6874L82.2653 51.7554L89.1262 51.7882L92.249 51.8037V54.8358L98.7463 54.7876L98.6498 39.6269L90.4204 39.6713ZM92.195 49.3155L89.1262 49.2759L86.0314 49.2364L89.1262 46.2467L91.2421 44.2059H92.221L92.195 49.3155Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M126 39.5758H118.064L112.974 43.8771L109.166 39.6964H101.951L108.805 47.2535L99.7871 54.8107H107.523L112.172 50.9116L115.699 54.8512L123.074 54.7712L116.419 47.5756L126 39.5758Z"
+                                        fill="#121212" />
+                                </svg>
                             </div>
                         </div>
-                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3">
+                        <!-- swiper slide -->
+                        <div class="swiper-slide flex flex-col md:flex-row items-center justify-between gap-3"
+                            style="width: 728px; margin-right: 30px;">
+                            <!-- Left content -->
                             <div class="max-w-[531px] w-full my-auto">
                                 <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
@@ -1094,29 +1607,59 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="max-w-[585px] w-full relative">
-                                <div
-                                    class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
-                                    <img data-aos="fade-up" data-aos-duration="900"
-                                        data-aos-anchor-placement="top-bottom" data-aos-delay="100"
-                                        src="./imgs/swiper logo3.png" alt="Swiper logo img 1"
-                                        class="absolute top-[35px] left-[35px]">
-                                    <img data-aos="fade-up" data-aos-duration="900"
-                                        data-aos-anchor-placement="top-bottom" data-aos-delay="100"
-                                        src="./imgs/swiper img3.png" alt="Swiper img 1"
-                                        class="md:w-full h-[198px] max-w-[433px] object-cover object-center">
-                                </div>
-                                <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100"
-                                    class="w-[80px] md:w-[110px] h-[40px] absolute bottom-[20px] md:bottom-[35px] md:left-[35px] left-0">
-                                    <div
-                                        class="swiper-button-next w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
-                                    </div>
-                                    <div
-                                        class="swiper-button-prev w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
-                                    </div>
-                                </div>
+                            <!-- rigth content -->
+                            <div
+                                class="rounded-[20px] relative flex items-center justify-center bg-[#E9E9E9] md:ml-auto w-full max-w-full md:max-w-[585px] h-[318px] md:h-[600px]">
+                                <!-- <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                    data-aos-delay="100" src="./imgs/swiper img3.png" alt="Swiper img 1"
+                                    class="w-full md:w-auto max-w-[247px] md:max-w-[433px]">
+                                    -->
+                                <video muted autoplay loop class="w-full md:w-auto max-w-[247px] md:max-w-[433px]"
+                                    src="https://netevia.com/wp-content/themes/netevia-dark/assets/other/iso-in-a-box/clovers.mp4"></video>
+                                <svg class="top-5 md:top-10 left-[18px] w-[66px] md:w-auto md:left-9 absolute"
+                                    width="126" height="31" viewBox="0 0 126 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M51.8834 20.8597C49.4661 23.7054 46.6587 24.8362 43.8126 24.8362C38.432 24.8362 34.1431 20.9763 34.1431 15.9078C34.1431 10.8781 38.2371 6.97925 43.6175 6.97925C46.4639 6.97925 49.271 8.10993 51.6883 10.9561L48.1013 13.4904C46.8147 11.6581 45.3332 10.9171 43.6175 10.9171C40.8493 10.9171 38.5878 13.1396 38.5878 15.9078C38.5878 18.7148 41.0442 20.8983 43.8126 20.8983C45.528 20.8983 47.0487 20.158 48.3743 18.481L51.8834 20.8597Z"
+                                        fill="#121212" />
+                                    <path d="M53.8706 0H58.3545V24.4857H53.8706V0Z" fill="#121212" />
+                                    <path
+                                        d="M70.2062 6.97925C75.5867 6.97925 79.8757 10.8781 79.8757 15.9078C79.8757 20.9376 75.5867 24.8362 70.2062 24.8362C64.8259 24.8362 60.498 20.9376 60.498 15.9078C60.498 10.8781 64.8259 6.97925 70.2062 6.97925ZM70.2062 21.0542C73.0134 21.0542 75.5867 18.7927 75.5867 15.9078C75.5867 13.0226 73.0134 10.7612 70.2062 10.7612C67.36 10.7612 64.8259 13.0226 64.8259 15.9078C64.8259 18.7927 67.36 21.0542 70.2062 21.0542Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M79.1641 7.33008H84.4278L88.678 16.4928L93.2786 7.33008H98.1526L88.678 25.5385L79.1641 7.33008Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M113.703 22.5361C111.988 23.9786 109.609 24.8362 107.115 24.8362C101.734 24.8362 97.4058 20.9376 97.4058 15.9078C97.4058 10.8781 101.344 6.97925 106.724 6.97925C112.105 6.97925 115.613 10.8781 115.613 15.9078V17.1944H101.889C102.513 19.4558 104.697 21.0542 107.115 21.0542C108.596 21.0542 109.883 20.5865 111.052 19.3778L113.703 22.5361ZM110.896 13.5294C110.233 11.9699 108.752 10.7612 106.724 10.7612C104.736 10.7612 103.099 11.853 102.28 13.5294H110.896Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M117.812 14.8551C117.812 10.7612 120.932 7.33008 126 7.33008V11.3459C123.817 11.3459 122.258 12.6719 122.258 15.4011V24.4857H117.812V14.8551Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M13.8839 8.03584C13.8839 4.20469 10.7744 1.09387 6.94048 1.09387C3.10742 1.09387 0 4.20072 0 8.03192C0 11.8631 3.10737 14.9779 6.94222 14.9779H13.8839V8.03584Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M15.8311 8.03593C15.8311 4.20475 18.9406 1.09393 22.7745 1.09393C26.6076 1.09393 29.715 4.20078 29.715 8.03193C29.715 11.8631 26.6076 14.9779 22.7728 14.9779H15.8311V8.03593Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M15.8311 23.8673C15.8311 27.7022 18.9397 30.8093 22.7752 30.8093C26.6064 30.8093 29.715 27.7045 29.715 23.8696C29.715 20.0383 26.6065 16.9253 22.7728 16.9253H15.8311V23.8673Z"
+                                        fill="#121212" />
+                                    <path
+                                        d="M13.884 23.8673C13.884 27.7022 10.7753 30.8093 6.93989 30.8093C3.10866 30.8093 0 27.7045 0 23.8696C0 20.0383 3.1086 16.9253 6.94225 16.9253H13.884V23.8673ZM6.93989 28.8517C9.69507 28.8517 11.9366 26.6168 11.9366 23.8696V18.8737H6.94623C4.18983 18.8737 1.94716 21.1235 1.94716 23.8696C1.94716 26.6168 4.18681 28.8517 6.93989 28.8517Z"
+                                        fill="#121212" />
+                                </svg>
                             </div>
+                        </div>
+                    </div>
+                    <!-- swiper button -->
+                    <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="100"
+                        class="w-[80px] md:w-[110px] absolute flex gap-3 md:left-auto left-[34px] bottom-5 md:bottom-[50px] md:right-[38%] z-50">
+                        <div
+                            class="swiper-button-next w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212]">
+                        </div>
+                        <div
+                            class="swiper-button-prev w-[22px] md:w-[40px] h-[22px] md:h-[40px] rounded-[5px] opacity-70 border-[1.43px] border-solid border-[#121212] text-[#121212] text-[14px]">
                         </div>
                     </div>
                 </div>
@@ -1145,7 +1688,7 @@
                         <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" src="./imgs/ingenico.png" alt="ingenico logo">
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                    <div data-aos="fade-u     p" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
                         class="border border-solid border-[#121212] opacity-30 w-[50px] md:w-[131px] h-[1px] !rotate-90 my-auto">
                     </div>
@@ -1168,7 +1711,8 @@
                     <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100"
                         class="font-medium text-[#121212] text-[14px] md:text-[22px] md:text-center leading-[16px] md:leading-[33px] mt-5 md:mt-[30px]">
-                        We partnered with some of the industry's best point of sale software providers to provide our
+                        We partnered with some of the industry's best point of sale software providers to provide
+                        our
                         ISO with tools to serve their merchants better.
                     </p>
                     <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -1198,7 +1742,8 @@
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
                                 class="font-medium text-[14px] md:text-[18px] text-[#121212] leading-[21px] opacity-80 md:mt-[5px]">
-                                The flexibility to combine different Android devices to create the perfect solution for
+                                The flexibility to combine different Android devices to create the perfect solution
+                                for
                                 your merchants.
                             </p>
                         </div>
@@ -1269,7 +1814,7 @@
                         or APIs and a complete Omnichannel payment experience.
                     </p>
                 </div>
-                <div class="w-full">
+                <div class="w-full mt-10 lg:mt-20">
                     <img src="./imgs/All Payment.png" alt="All Patment img"
                         class="hidden md:block w-full object-cover object-center">
                     <img src="./imgs/All Payment 2.png" alt="All Patment img"
@@ -1304,7 +1849,8 @@
                         <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" class="w-full flex items-center justify-between">
                             <img src="./imgs/Early Wage.png" alt="Early Wage" class="object-cover object-center">
-                            <button
+                            <button data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="py-[9px] px-[16px] md:py-[11px] md:px-[25px]  flex items-center justify-center bg-[#FFFFFF1F] rounded-[55px] font-medium text-[9px] md:text-[14px] text-white leading-[19px]">
                                 Coming soon
                             </button>
@@ -1318,22 +1864,26 @@
                             <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                 data-aos-delay="100"
                                 class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
-                                Give your employees faster access to a part of their paycheck without disrupting your
+                                Give your employees faster access to a part of their paycheck without disrupting
+                                your
                                 regular payroll.
                             </p>
                         </div>
                     </div>
                     <div
                         class="max-w-[465px] w-full p-[30px] rounded-[12px] bg-[#1E1E1E] border border-solid border-[#FFFFFF1F]">
-                        <div class="w-full">
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="w-full">
                             <img src="./imgs/VIP.png" alt="VIP" class="object-cover object-center">
                         </div>
                         <div class="w-full mt-[30px]">
-                            <h3
+                            <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="font-semibold text-white text-[16px] md:text-[24px] leading-[17px] md:leading-[26px]">
                                 Exclusive Events
                             </h3>
-                            <p
+                            <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
                                 Access to exclusive events and premium
                                 experiences with our card program.
@@ -1342,20 +1892,24 @@
                     </div>
                     <div
                         class="max-w-[465px] w-full p-[30px] rounded-[12px] bg-[#1E1E1E] border border-solid border-[#FFFFFF1F]">
-                        <div class="w-full flex items-center justify-between">
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="w-full flex items-center justify-between">
                             <img src="./imgs/High-Yield.png" alt="High-Yield Savings Account"
                                 class="object-cover object-center">
-                            <button
+                            <button data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="py-[9px] px-[16px] md:py-[11px] md:px-[25px]  flex items-center justify-center bg-[#FFFFFF1F] rounded-[55px] font-medium text-[9px] md:text-[14px] text-white leading-[19px]">
                                 Coming soon
                             </button>
                         </div>
                         <div class="w-full mt-[30px]">
-                            <h3
+                            <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="font-semibold text-white text-[16px] md:text-[24px] leading-[17px] md:leading-[26px]">
                                 High-Yield Savings Account
                             </h3>
-                            <p
+                            <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
                                 Let your employees set money aside from their paychecks in our High-Yield Savings
                                 Accounts.
@@ -1364,20 +1918,24 @@
                     </div>
                     <div
                         class="max-w-[465px] w-full p-[30px] rounded-[12px] bg-[#1E1E1E] border border-solid border-[#FFFFFF1F]">
-                        <div class="w-full flex items-center justify-between">
+                        <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                            data-aos-delay="100" class="w-full flex items-center justify-between">
                             <img src="./imgs/Tax.png" alt="Early Access to Tax Refund"
                                 class="object-cover object-center">
-                            <button
+                            <button data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="py-[9px] px-[16px] md:py-[11px] md:px-[25px]  flex items-center justify-center bg-[#FFFFFF1F] rounded-[55px] font-medium text-[9px] md:text-[14px] text-white leading-[19px]">
                                 Coming soon
                             </button>
                         </div>
                         <div class="w-full mt-[30px]">
-                            <h3
+                            <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="font-semibold text-white text-[16px] md:text-[24px] leading-[17px] md:leading-[26px]">
                                 Early Access to Tax Refund
                             </h3>
-                            <p
+                            <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                                data-aos-delay="100"
                                 class="mt-2 md:mt-[12px] font-normal text-[10px] md:text-[16px] text-white leading-[10px] md:leading-[17px]">
                                 Early Access to Tax Refund offers employees
                                 an interest-free advance on their expected
@@ -1393,10 +1951,11 @@
     <!-- Footer Section -->
     <footer class="w-full bg-[#121212] pb-[10px] md:pb-10 px-8">
         <div class="max-w-[1184px] w-full mx-auto">
-            <div class="w-full">
+            <div data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom" data-aos-delay="100"
+                class="w-full">
                 <img src="./imgs/footer img.png" alt="Footer img" class="w-full object-cover object-center">
             </div>
-            <div class="w-full bg-inherit -translate-y-[45px] md:-translate-y-[100px] relative z-10">
+            <div class="w-full bg-inherit md:-translate-y-[50px] relative z-10">
                 <div class="max-w-[1040px] w-full mx-auto">
                     <div class="max-w-[475px] w-full flex items-center justify-between">
                         <h3 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
@@ -1413,9 +1972,10 @@
                             </a>
                         </div>
                     </div>
-                    <div class="w-full pt-10 md:pt-20 flex flex-wrap justify-between gap-y-[80px] items-start">
+                    <div
+                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-5 mb-8 md:mb-32 mt-[25px]">
                         <!--  -->
-                        <ul class="flex flex-col gap-[7px]">
+                        <ul class="flex flex-col gap-[7px] pt-2.5 border-t border-white/10 ">
                             <li>
                                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
@@ -1423,61 +1983,70 @@
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Agents
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Enterprise
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Goverment
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     ISOs
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     ISVs
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Non-Profits
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Restaurants
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Retail
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     SaaS
                                 </a>
                             </li>
                         </ul>
                         <!--  -->
-                        <ul class="flex flex-col gap-[7px]">
+                        <ul class="flex flex-col gap-[7px] pt-2.5 border-t border-white/10 ">
                             <li>
                                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
@@ -1485,61 +2054,70 @@
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Business Banking
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Embedded Banking
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Embedded Finance
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     HQ
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     In Person Payments
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     ISO Banking
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Omnichannel Payments
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Online Payments
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Personal Banking
                                 </a>
                             </li>
                         </ul>
                         <!--  -->
-                        <ul class="flex flex-col gap-[7px]">
+                        <ul class="flex flex-col gap-[7px] pt-2.5 border-t border-white/10 ">
                             <li>
                                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
@@ -1547,31 +2125,35 @@
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Banking API
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Gateaway API
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Payment API
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Terminal API
                                 </a>
                             </li>
                         </ul>
                         <!--  -->
-                        <ul class="flex flex-col gap-[7px]">
+                        <ul class="flex flex-col gap-[7px] pt-2.5 border-t border-white/10 ">
                             <li>
                                 <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                                     data-aos-delay="100"
@@ -1579,67 +2161,78 @@
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Annual Conference
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Become a Partner
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Blog
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Careers
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Community
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     ISV Marketplace
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     News
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     PCI Compliance
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Privacy Policy
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Support
                                 </a>
                             </li>
                             <li>
                                 <a data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
-                                    data-aos-delay="100" href="#" class="font-normal text-white text-[14px]">
+                                    data-aos-delay="100" href="#"
+                                    class="font-normal text-white text-[14px] hover:text-blue-500">
                                     Terms of Service
                                 </a>
                             </li>
@@ -1650,21 +2243,20 @@
         </div>
         <div class="max-w-[1184px] w-full mx-auto mt-10 md:mt-[120px]">
             <div class="max-w-[1184px] w-full h-[0.75px] mx-auto border border-solid border-white opacity-[12%]"></div>
-            <div
-                class="max-w-[1040px] w-full mt-[25px] mx-auto flex flex-row md:flex-col justify-between items-center md:items-start">
+            <div class="flex flex-col gap-6 mt-[25px]">
                 <div class="hidden md:block">
-                    <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
+                    <a href="#" data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100" class="flex font-bold text-[12px] text-white gap-[7px] items-center">
                         <i class='bx bx-map'></i>
                         United States
-                    </p>
+                    </a>
                 </div>
-                <div class="w-[80px] h-[16px] mt-7">
+                <div class="w-[80px] h-[16px] lg:mt-7">
                     <img data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                         data-aos-delay="100" src="./imgs/Footer Logo.png" alt="Footer logo"
                         class="object-cover object-center w-full h-full">
                 </div>
-                <div class="w-full mt-6 flex items-end justify-between gap-[10px]">
+                <div class="gap-10 flex items-center md:items-end justify-between lg:justify-start">
                     <div class="hidden md:block w-[176px]">
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" class="font-normal text-[16px] text-white ">
@@ -1697,7 +2289,7 @@
                             </span>
                         </p>
                     </div>
-                    <div class="hidden md:block w-[318px]">
+                    <div class="hidden lg:block w-[318px]">
                         <p data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom"
                             data-aos-delay="100" class="font-normal text-[12px] text-white">
                             <br>
